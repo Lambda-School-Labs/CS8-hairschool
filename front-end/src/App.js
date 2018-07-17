@@ -15,7 +15,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome</h1>
+          <Link to="#"> User Sign Up </Link>
           <Link to="/User/Schedule"> User Sign In </Link>
           <Link to="/Admin/Schedule"> Admin Sign In </Link>
         </header>

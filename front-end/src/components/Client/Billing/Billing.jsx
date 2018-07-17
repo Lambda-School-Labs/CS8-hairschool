@@ -8,8 +8,10 @@ class Billing extends React.Component {
         return (
             <div className="Billing">
                 <ClientNav/>
-                <div className="PaymentInfo"></div>
-                <div className="BuyNowButton"></div>
+                <div className="PaymentInfo">
+                Payment Info Here
+                </div>
+                <button className="BuyNowButton">Buy Now</button>
             </div>
         )
     }

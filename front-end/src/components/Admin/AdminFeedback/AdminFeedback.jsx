@@ -9,6 +9,7 @@ class AdminFeedback extends React.Component {
             <div className="AdminFeedback">
                 <AdminNav/>
                 <div className="StylistCards">
+                    Stylists Cards Here
                 </div>
             </div>
         )

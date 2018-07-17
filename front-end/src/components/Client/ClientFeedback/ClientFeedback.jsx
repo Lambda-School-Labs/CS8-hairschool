@@ -8,8 +8,12 @@ class ClientFeedback extends React.Component {
         return (
             <div className="ClientFeedback">
                 <ClientNav />
-                <div className="AppointmentInfo"></div>
-                <div className="FeedbackForm"></div>
+                <div className="AppointmentInfo"> 
+                Appointment Info Here: Stylist Dropdown, Service Dropdown, Date Dropdown, Time Dropdown
+                </div>
+                <div className="FeedbackForm">
+                Feedback Form Here: Consultation, On time, Styling, Customer Service, Overall score
+                </div>
                 <div className="SubmitButton"></div>
             </div>
         )
