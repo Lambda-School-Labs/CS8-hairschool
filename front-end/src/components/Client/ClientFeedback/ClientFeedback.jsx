@@ -1,12 +1,13 @@
 import React from 'react';
 import './ClientFeedback';
+import ClientNav from '../ClientNav/ClientNav';
 
 class ClientFeedback extends React.Component {
 
     render () {
         return (
             <div className="ClientFeedback">
-                {/*Navigation*/}
+                <ClientNav />
                 <div className="AppointmentInfo"></div>
                 <div className="FeedbackForm"></div>
                 <div className="SubmitButton"></div>
@@ -14,3 +15,5 @@ class ClientFeedback extends React.Component {
         )
     }
 }
+
+export default ClientFeedback;
