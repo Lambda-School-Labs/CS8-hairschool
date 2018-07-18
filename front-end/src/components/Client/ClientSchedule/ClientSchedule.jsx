@@ -9,9 +9,11 @@ class ClientSchedule extends React.Component {
             <div className="ClientSchedule">
                <ClientNav/>
                <div className="Title"> Schedule with Lambda Hair School</div>
+               <div className="Container0">
                <div className="Services">Service Cards Here</div>
                <div className="Stylists"> Drop down Stylist List Here</div>
                <div className="Calender"> Calender and Times here</div> 
+               </div>
             </div>
         )
     }
