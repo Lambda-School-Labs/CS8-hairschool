@@ -1,0 +1,16 @@
+.ClientSchedule .Container0 {
+
+    flex: row;
+
+}
+
+.Title {
+    font-size: 30pt;
+    color: #6d2e46;
+    text-shadow: 2px #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-stretch: expanded;
+}
+
+
+
