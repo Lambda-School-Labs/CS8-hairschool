@@ -7,10 +7,10 @@ class AdminSchedule extends React.Component {
     render () {
         return (
             <div className="AdminSchedule">
-                <AdminNav/>
-                <div className="ScheduleHeader">Schedule</div>
-                <div className="AdminCalender">Calender Here</div>
-                <div className="AppointmentCards"> Appointment Cards Here</div>
+                        <AdminNav/>
+                        <h1 className="ScheduleHeader">Schedule</h1>
+                        <div className="AdminCalender">Calender Here</div>
+                        <div className="AppointmentCards"> Appointment Cards Here</div>
             </div>
         )
     }

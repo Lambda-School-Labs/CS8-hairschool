@@ -10,10 +10,10 @@ class ClientNav extends React.Component {
             <div className="ClientNav">
                 <nav> 
                    <NavLink to="/">Home</NavLink>
-                   <NavLink to="/User/Schedule" activeStyle={ {color: 'red'} }>Scheduling</NavLink>
-                   <NavLink to="/User/Feedback" activeStyle={ {color: 'red'} }>Feedback</NavLink>
-                   <NavLink to="/User/Billing" activeStyle={ {color: 'red'} }>Billing</NavLink>
-                   <NavLink to="/User/Settings" activeStyle={ {color: 'red'} }>Settings</NavLink>
+                   <NavLink to="/User/Schedule" activeStyle={ {background: 'red'} }>Scheduling</NavLink>
+                   <NavLink to="/User/Feedback" activeStyle={ {background: 'red'} }>Feedback</NavLink>
+                   <NavLink to="/User/Billing" activeStyle={ {background: 'red'} }>Billing</NavLink>
+                   <NavLink to="/User/Settings" activeStyle={ {background: 'red'} }>Settings</NavLink>
                </nav>
             </div>
         )

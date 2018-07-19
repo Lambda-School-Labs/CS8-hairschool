@@ -1,0 +1,14 @@
+.AdminNav {
+    display: flex;
+    justify-content: flex-start;
+    width: 20%;
+    height: 300px;
+    border: 1px solid black;
+    margin-right: 0px;
+    
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+}
