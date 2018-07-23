@@ -1,7 +1,8 @@
 import React from 'react';
 import './AdminSchedule.css';
 import AdminNav from '../AdminNav/AdminNav';
-import { Card, Button, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBody } from 'reactstrap';
+import Calendar from 'react-calendar';
+import { Card, CardText, Row, Col, CardHeader, CardFooter, CardBody } from 'reactstrap';
 
 class AdminSchedule extends React.Component {
 
@@ -10,7 +11,9 @@ class AdminSchedule extends React.Component {
             <div className="AdminSchedule">
                         <AdminNav/>
                         <h1 className="ScheduleHeader">Schedule</h1>
-                        <div className="AdminCalender">Calender Here</div>
+                        <div className="AdminCalender">
+                            <Calendar />
+                        </div>
                         <div className="AppointmentCards">
                         <Row>
                             <Col sm="2">
