@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import hairschool
+from .models import SignUp
 
-admin.site.register(hairschool)
+admin.site.register(SignUp)
