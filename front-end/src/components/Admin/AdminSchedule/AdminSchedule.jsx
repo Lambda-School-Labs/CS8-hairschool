@@ -9,14 +9,18 @@ class AdminSchedule extends React.Component {
     render () {
         return (
             <div className="AdminSchedule">
-                        <AdminNav/>
-                        <h1 className="ScheduleHeader">Schedule</h1>
-                        <div className="AdminCalender">
-                            <Calendar />
-                        </div>
+                    <Row>
+                        <Col sm="3">
+                            <AdminNav/>
+                        </Col>
+                        <Col sm="5">
+                            <h1 className="ScheduleHeader">Schedule</h1>
+                            <div className="AdminCalender">
+                                <Calendar />
+                            </div>
+                        </Col>
+                        <Col sm="3">
                         <div className="AppointmentCards">
-                        <Row>
-                            <Col sm="2">
                                 <Card>
                                     <CardHeader>9:00am</CardHeader>
                                     <CardBody>
@@ -26,8 +30,6 @@ class AdminSchedule extends React.Component {
                                         <small className="text-muted">Last updated 3 mins ago</small>
                                     </CardFooter>
                                 </Card>
-                            </Col>
-                            <Col sm="2">
                                 <Card>
                                     <CardHeader>10:00am</CardHeader>
                                     <CardBody>
@@ -38,8 +40,6 @@ class AdminSchedule extends React.Component {
                                         <small className="text-muted">Last updated 3 mins ago</small>
                                     </CardFooter>
                                 </Card>
-                            </Col>
-                            <Col sm="2">
                                 <Card>
                                     <CardHeader>12:15pm</CardHeader>
                                     <CardBody>
@@ -50,21 +50,18 @@ class AdminSchedule extends React.Component {
                                         <small className="text-muted">Last updated 3 mins ago</small>
                                     </CardFooter>
                                 </Card>
-                            </Col>
-                            <Col sm="2">
                                 <Card>
                                     <CardHeader>5:00pm</CardHeader>
                                     <CardBody>
-                                
                                         <CardText>Stylist: Ariel <br/> Client: Cindy <br/> Services: Cut and Blow</CardText>
                                     </CardBody>
                                     <CardFooter>
                                         <small className="text-muted">Last updated 3 mins ago</small>
                                     </CardFooter>
                                 </Card>
-                            </Col>
-                            </Row>
-                        </div>
+                            </div>
+                        </Col>
+                    </Row>
             </div>
         )
     }
