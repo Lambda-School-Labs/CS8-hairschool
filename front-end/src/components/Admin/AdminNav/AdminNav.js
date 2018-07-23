@@ -8,11 +8,13 @@ class AdminNav extends React.Component {
     
     render() {
         return (
-            <div className="AdminNav col-sm-3">
+            <div className="AdminNav">
                 
                     <nav className="sidebar-nav">
-                        <NavLink className="navItem" to="/Admin/Schedule" style={{textDecoration: 'none'}} activeStyle={ {background: 'yellow' } }>Admin Schedule</NavLink>
-                        <NavLink className="navItem" to="/Admin/Feedback" style={{textDecoration: 'none'}} activeStyle={ {background: 'yellow' } }>Admin Feedback</NavLink>
+                        <ul>
+                            <li><NavLink className="navItem" to="/Admin/Schedule" style={{textDecoration: 'none'}} activeStyle={ {background: 'yellow' } }>Admin Schedule</NavLink> </li>
+                            <li><NavLink className="navItem" to="/Admin/Feedback" style={{textDecoration: 'none'}} activeStyle={ {background: 'yellow' } }>Admin Feedback</NavLink> </li>
+                        </ul>
                     </nav>
                  
             </div>
