@@ -1,19 +1,25 @@
-.ClientSchedule .Container0 {
+.ClientSchedule {
 
-    flex: row;
+    flex: inline;
+    padding-top: 40px;
 
 }
 
-.Title {
+
+
+.Services {
     font-size: 30pt;
     color: #6d2e46;
     text-shadow: 2px #000000;
     font-family: 'Times New Roman', Times, serif;
     font-stretch: expanded;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    
 }
 
-.button{
-    background-color: green;
+.Services .Button{
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 
