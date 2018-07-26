@@ -1,12 +1,20 @@
 
 .ClientSchedule {
-    flex-flow: column nowrap; 
+    display: flex;
+    
    padding-left: 40px;
    padding-right: 40px;
    padding-bottom: 40px;
     padding-top: 40px;
-    box-shadow: 0px 2px 3px #d5b9b2
+    box-shadow: 0px 2px 3px #d5b9b2;
+    align-items: center;
 
+}
+
+.ClientSchedule .Container{
+    display: flex;
+    
+    justify-content: center;
 }
 
 
@@ -19,29 +27,35 @@
     text-shadow: 3px #000000;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 30px;
+    align-items: center;
    
     
     
 }
 
 .ClientSchedule .Services .Dropboxx{
-    padding-right: 10px;
+
+    /* padding-right: 10px;
     padding-left: 50px;
-    margin: 20px;
+    margin: 20px; */
+}
+
+.ClientSchedule .Services .Calendar {
+    /* margin: 20px; */
 }
 
 
-
 .Services .Button{
+    
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     width: 140px;
     height: 45px;
     font-family: 'Roboto', sans-serif; 
     font-size: 11px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: bold;
     color: #000000;
     background-color: #ffff;
     border: none;
@@ -49,6 +63,7 @@
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    margin-bottom: 10px;
     
     
 }

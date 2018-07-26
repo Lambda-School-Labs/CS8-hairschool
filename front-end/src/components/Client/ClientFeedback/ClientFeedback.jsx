@@ -1,6 +1,10 @@
 import React from 'react';
-import './ClientFeedback';
+import './ClientFeedback.css';
 import ClientNav from '../ClientNav/ClientNav';
+import FeedbackForm from './Formbody';
+import FeedbackDrop from './Formhead';
+import {Panel, Button} from 'react-bootstrap';
+
 
 class ClientFeedback extends React.Component {
 
@@ -8,13 +12,21 @@ class ClientFeedback extends React.Component {
         return (
             <div className="ClientFeedback">
                 <ClientNav />
+
                 <div className="AppointmentInfo"> 
-                Appointment Info Here: Stylist Dropdown, Service Dropdown, Date Dropdown, Time Dropdown
+                    <FeedbackDrop/>
                 </div>
+
                 <div className="FeedbackForm">
-                Feedback Form Here: Consultation, On time, Styling, Customer Service, Overall score
+                    <Panel className="FeedbackFormat">
+                        <Panel.Body>
+                            <FeedbackForm/>
+                         </Panel.Body>
+                    </Panel>
                 </div>
+
                 <div className="SubmitButton"></div>
+                <Button size="lg" color="primary"> Submit </Button>
             </div>
         )
     }
