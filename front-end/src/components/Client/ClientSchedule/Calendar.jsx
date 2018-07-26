@@ -4,8 +4,8 @@ import DateTimePicker from 'react-datetime-picker';
 class Calendar extends Component{
     state ={
         date: new Date(),
-        isCalendarOpen: true,
-        isClockOpen: true,
+       
+       
     }
 
 onChange = date => this.setState({date})
@@ -14,8 +14,10 @@ render() {
     return (
         <div classname="Scheduler">
         <DateTimePicker
+        isCalendarOpen={true}
         onChange={this.onChange}
         value={this.state.date}
+        required={true}
         />
     </div>
     );
