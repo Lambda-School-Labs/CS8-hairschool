@@ -1,20 +1,10 @@
-.navItem {
+.ClientNav {
     display: flex;
-    flex-direction: column;
-    color: black;
-    border: 1px solid black;
-    padding: 5%;
-    text-align: center;
-   
-}
-
-.navHome {
-    display: flex;
-    flex-direction: column;
-    background: palevioletred;
-    color: white;
-    border: 1px solid black;
-    padding: 5%;
-    text-align: center;
-    margin-bottom: 5%;
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+    
+    
 }

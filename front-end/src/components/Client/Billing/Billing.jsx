@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Billing.css';
 import ClientNav from '../ClientNav/ClientNav';
 import { Row, Col,} from 'reactstrap';
+import {Button, Panel, PanelHeader} from 'react-bootstrap';
+import Billing2 from './Billingform';
 
-class Billing extends React.Component {
+class Billing extends Component {
 
     render () {
         return (
@@ -14,11 +16,19 @@ class Billing extends React.Component {
                     </Col>
                     <Col sm="9">
                         <div className="PaymentInfo">
-                        Payment Info Here
+                        <Panel>
+                            <Panel.Heading>
+                                Payment Info 
+                            </Panel.Heading>
+                            <Panel.Body>
+                                <Billing2/>
+                            </Panel.Body>
+                        </Panel>
                         </div>
                         <button className="BuyNowButton">Buy Now</button>
                     </Col>
                 </Row>
+               
             </div>
         )
     }
