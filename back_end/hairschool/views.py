@@ -1,10 +1,9 @@
-from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import generics
 
-from .models import SignUp
-from .serializers import SignUpSerializer
+from . import models
+from . import serializers
 
 
-class SignUpView(viewsets.ModelViewSet):
-    queryset = SignUp.objects.all()
-    serializer_class = SignUpSerializer
+class UserListView(generics.ListCreateAPIView):
+    queryset = models.CustomUser.objects.all()
+    serializer_class = serializers.UserSerializer
