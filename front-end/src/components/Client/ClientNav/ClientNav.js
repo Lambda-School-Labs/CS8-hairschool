@@ -9,11 +9,13 @@ class ClientNav extends React.Component {
         return (
             <div className="ClientNav">
                 <nav> 
-                   <NavLink to="/">Home</NavLink>
-                   <NavLink to="/User/Schedule" activeStyle={ {background: 'red'} }>Scheduling</NavLink>
-                   <NavLink to="/User/Feedback" activeStyle={ {background: 'red'} }>Feedback</NavLink>
-                   <NavLink to="/User/Billing" activeStyle={ {background: 'red'} }>Billing</NavLink>
-                   <NavLink to="/User/Settings" activeStyle={ {background: 'red'} }>Settings</NavLink>
+                    <ul>
+                    <li style={{listStyleType: "none"}}> <NavLink className="navHome" to="/">Home</NavLink> </li>
+                    <li style={{listStyleType: "none"}}> <NavLink className="navItem" to="/User/Schedule" activeStyle={ {background: 'lightBlue'} }>Scheduling</NavLink> </li>
+                    <li style={{listStyleType: "none"}}> <NavLink className="navItem" to="/User/Feedback" activeStyle={ {background: 'lightBlue'} }>Feedback</NavLink></li>
+                    <li style={{listStyleType: "none"}}> <NavLink className="navItem" to="/User/Billing" activeStyle={ {background: 'lightBlue'} }>Billing</NavLink></li>
+                    <li style={{listStyleType: "none"}}> <NavLink className="navItem" to="/User/Settings" activeStyle={ {background: 'lightBlue'} }>Settings</NavLink></li>
+                    </ul>
                </nav>
             </div>
         )

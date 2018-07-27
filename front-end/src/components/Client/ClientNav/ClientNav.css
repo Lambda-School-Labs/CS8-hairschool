@@ -1,0 +1,20 @@
+.navItem {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border: 1px solid black;
+    padding: 5%;
+    text-align: center;
+   
+}
+
+.navHome {
+    display: flex;
+    flex-direction: column;
+    background: palevioletred;
+    color: white;
+    border: 1px solid black;
+    padding: 5%;
+    text-align: center;
+    margin-bottom: 5%;
+}

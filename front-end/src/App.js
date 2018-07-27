@@ -15,9 +15,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Link to="#"> User Sign Up </Link>
-          <Link to="/User/Schedule"> User Sign In </Link>
-          <Link to="/Admin/Schedule"> Admin Sign In </Link>
+          <Link className="link signup" to="#"> User Sign Up </Link>
+          <Link className="link Usignin" to="/User/Schedule"> User Sign In </Link>
+          <Link className="link Asignin" to="/Admin/Schedule"> Admin Sign In </Link>
         </header>
         
         <Switch>

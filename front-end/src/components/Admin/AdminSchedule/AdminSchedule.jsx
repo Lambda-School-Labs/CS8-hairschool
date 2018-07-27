@@ -21,16 +21,16 @@ class AdminSchedule extends React.Component {
                     },
                     {
                         id: 999,
-                        title: 'Repeating Event',
+                        title: 'Samantha Hair Cut',
                         start: '2018-07-09T16:00:00'
                     },
                     {
                         id: 999,
-                        title: 'Repeating Event',
+                        title: 'Ashley Hair Color',
                         start: '2018-07-16T16:00:00'
                     },
                     {
-                        title: 'Conference',
+                        title: 'Bianca Prom Hair',
                         start: '2018-07-11',
                         end: '2018-07-13'
                     },
@@ -56,12 +56,12 @@ class AdminSchedule extends React.Component {
         return (
             <div className="AdminSchedule">
                     <Row>
-                        <Col sm="2">
+                        <Col sm="3">
                             <AdminNav/>
                         </Col>
                         <Col sm="7">
                             <h1 className="ScheduleHeader">Schedule</h1>
-                            <div className="AdminCalender">
+                            <div className="AdminCalendar">
                             <FullCalendar
                                 id = "your-custom-ID"
                                 header = {{
@@ -77,7 +77,7 @@ class AdminSchedule extends React.Component {
                             />
                             </div>
                         </Col>
-                        <Col sm="3">
+                        <Col sm="2">
                         <div className="AppointmentCards">
                                 <Card>
                                     <CardHeader>9:00am</CardHeader>

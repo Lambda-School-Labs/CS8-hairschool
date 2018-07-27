@@ -65,6 +65,106 @@ class AdminFeedback extends React.Component {
                             </Card>
                          </Col>
                      </Row>
+                     <Row>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Ariel</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Great Service</CardTitle>
+                                    <CardText body>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Bianca</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Bianca was Awesome</CardTitle>
+                                    <CardText>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Ariel</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Great Service</CardTitle>
+                                    <CardText body>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Bianca</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Bianca was Awesome</CardTitle>
+                                    <CardText>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                     </Row>
+                     <Row>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Ariel</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Great Service</CardTitle>
+                                    <CardText body>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Bianca</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Bianca was Awesome</CardTitle>
+                                    <CardText>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Ariel</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Great Service</CardTitle>
+                                    <CardText body>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                         <Col sm="3">
+                            <Card>
+                                <CardHeader>Stylist: Bianca</CardHeader>
+                                <CardBody>
+                                    <CardTitle>Bianca was Awesome</CardTitle>
+                                    <CardText>This is the feedback this stylist got back from the customer</CardText>
+                                </CardBody>
+                                <CardFooter>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </CardFooter>
+                            </Card>
+                         </Col>
+                     </Row>
                     </div> {/* Cards */}
 
                 </Col>                    
