@@ -19,46 +19,47 @@ class ClientSchedule extends React.Component {
         return (
         
             <div className="ClientSchedule">
-            <Grid>
-                
-                        <div className="Title">Schedule with Lambda School 
-                            </div>
             
-                            <div className="Container0">
+                <Row>
+                
+                    <Col sm={3}  >
+                        <ClientNav/>
+                    </Col>
+                    
+                <Col sm={9}>
+                
+                    <div className="Title">Schedule with Lambda School </div>
+                 
+                    <div className="Services">
 
                             <Row>
-                                <Col sm={3} >
-                                    <ClientNav/>
-                                </Col>
-                            
-               
-                                    <div className="Services">
-                                    
-                                        <Col md={0}>
+                                <Col sm={4}>
                                             <ul className="Buttons">
 
-                                                <ul><Button div className= "Button" bsSize="large">Hair $20</Button></ul>
-                                                <ul><Button div className="Button" bsSize="large">Cut & Color $30</Button></ul>
-                                                <ul><Button div className= "Button" bsSize="large">Extensions $40</Button></ul>
-                                                <ul><Button div className= "Button" bsSize="large">Color $20</Button></ul>
-                                                <ul><Button div className= "Button" bsSize="large">Barbering $20</Button></ul>
+                                                <li><Button div className= "Button" bsSize="large">Hair $20</Button></li>
+                                                <li><Button div className="Button" bsSize="large">Cut & Color $30</Button></li>
+                                                <li><Button div className= "Button" bsSize="large">Extensions $40</Button></li>
+                                                <li><Button div className= "Button" bsSize="large">Color $20</Button></li>
+                                                <li><Button div className= "Button" bsSize="large">Barbering $20</Button></li>
                                             </ul>
-                                         </Col>
-                                        <Col > 
+                                        </Col>
+                                         
+                                        <Col sm={4}>
                                                 <div className="Dropboxx"> 
                                                     <Dropboxx/>
                                                 </div>
                                         </Col>
-                                        <Col >
+                                        <Col sm={4}>
                                                 <div classname="Calendar">
                                                         <Calendar/>
                                                 </div>
                                         </Col>
-                                    
-                                    </div>   
+                                    </Row>
+                                </div> 
+                </Col> 
                                 </Row>
-                            </div>
-                  </Grid>
+                           
+                  
             </div>
         
             
