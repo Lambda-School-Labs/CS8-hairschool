@@ -10,12 +10,12 @@ class SignIn extends React.Component {
             <div className="SignIn">
                 <Form>
                     <FormGroup>
-                        <Label for="Email"></Label>
-                        <Input></Input>
+                        <Label for="Email">Email: </Label>
+                        <Input type="text" name="email" />
                     </FormGroup>
                     <FormGroup>
-                        <Label for="Password"></Label>
-                        <Input></Input>
+                        <Label for="Password">Password: </Label>
+                        <Input type="text" name="password" />
                     </FormGroup>
                     <Button>Go</Button>
                 </Form>
@@ -25,3 +25,5 @@ class SignIn extends React.Component {
     }
 
 }
+
+export default SignIn;

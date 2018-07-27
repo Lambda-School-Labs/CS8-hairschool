@@ -47,7 +47,13 @@ class AdminSchedule extends React.Component {
                         title: 'Click for Google',
                         url: 'http://google.com/',
                         start: '2018-07-28'
+                    },
+                    {
+                        title: 'Cut and Blow',
+                        start: '2018-07-12T10:30:00',
+                        end: '2018-07-12T12:30:00'
                     }
+
                 ],		
         }
       }
@@ -67,7 +73,7 @@ class AdminSchedule extends React.Component {
                                 header = {{
                                     left: 'prev,next today myCustomButton',
                                     center: 'title',
-                                    right: 'month,basicWeek,basicDay'
+                                    right: 'month,basicWeek,basicDay,list'
                                 }}
                                 defaultDate={'2018-07-12'}
                                 navLinks= {true} // can click day/week names to navigate views
