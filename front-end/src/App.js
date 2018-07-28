@@ -19,12 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <Link className="link signup" to="/SignUp"> User Sign Up </Link>
-          <Link className="link signin" to="/SignIn"> User Sign In </Link>
-          <Link className="link DUsignin" to="/User/Schedule"> Demo User</Link>
-          <Link className="link DAsignin" to="/Admin/Schedule"> Demo Admin </Link>
-        </header>
+        
         
         <Switch>
           <Route exact path="/" component={LandingPage}/>
