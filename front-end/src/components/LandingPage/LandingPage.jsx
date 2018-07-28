@@ -19,7 +19,6 @@ class LandingPage extends React.Component {
                 <nav className="App-header">
                     <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>
                     <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
-                    <Link className="link DUsignin" to="/User/Schedule" style={{textDecoration: 'none'}}> Demo User</Link>
                     <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
                 </nav>
                 <header className="LandingTitle">Lambda Hair School</header>

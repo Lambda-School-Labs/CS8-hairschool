@@ -1,13 +1,11 @@
 import React from 'react';
 import './ClientSchedule.css';
 import ClientNav from '../ClientNav/ClientNav';
-import DatePicker from 'react-date-picker';
+import { Link } from 'react-router-dom';
 import {Button,Row, Col, Grid, Jumbotron, PanelTitle} from 'react-bootstrap';
 import './ClientSchedule.css';
 import Dropboxx from './Dropbox'; 
 import Calendar from './Calendar';
-{/*require('react-datetime');*/}
-
 
 class ClientSchedule extends React.Component {
     constructor(props){
@@ -26,19 +24,25 @@ class ClientSchedule extends React.Component {
     render () {
         return (
         
-            <div className="ClientSchedule">           
-                <Row>
+            <div className="ClientSchedule"> 
+
+                <nav className="App-header">
+                        <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>
+                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
+                        <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
+                </nav>          
+                <Row className="Container">
                 
                     <Col sm={2}  >
                         <ClientNav/>
                     </Col>
                     
-                    <Col sm={10}>                
-                        <div className="Title">Schedule with Lambda School </div>
+                    <Col sm={9}>                
+                        <div className="Title"> Schedule with Lambda School </div>
                     
                         <div className="Services">
-                                <Row>
-                                    <Col sm={3}>
+                                <Row className="serviceContainer">
+                                    <Col sm={4}>
                                         <ul className="Buttons">
                                             <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Hair $20</Button></li>
                                             <li style={{listStyleType: "none"}}><Button div className="Button" bsSize="large">Cut & Color $30</Button></li>
@@ -47,14 +51,14 @@ class ClientSchedule extends React.Component {
                                             <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Barbering $20</Button></li>
                                         </ul>
                                     </Col>                                         
-                                    <Col sm={3}>
+                                    <Col sm={4}>
                                         <div className="Dropboxx"> 
                                             <Dropboxx/>
                                         </div>
                                     </Col>
-                                    <Col sm={3}>
+                                    <Col sm={4}>
                                         <div classname="Calendar">
-                                                <Calendar/>
+                                            <Calendar/>
                                         </div>
                                     </Col>
                                 </Row>

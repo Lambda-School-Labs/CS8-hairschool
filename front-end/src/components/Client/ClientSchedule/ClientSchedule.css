@@ -1,31 +1,33 @@
+
 .ClientSchedule{
-    text-align: left;
-    justify-content: center;
+    height: 54.3rem;
+    background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
 }
 
 .ClientSchedule .Container{
-    display: flex;
+    margin: 2%;
     
-    justify-content: center;
 }
 
 
 
 .ClientSchedule .Title {
-    display: flex;
-    justify-content: center;
+    margin-right: 15%;
     font-size: 25pt;
-    color: #6d2e46;
+    color: white;
     text-shadow: 2px #000000;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poiret One', cursive;
     font-stretch: expanded;
     flex: flex;
     text-align: center;
+    margin-bottom: 2%;
 }
 
 .Services {
-
+    padding: 2%;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid #6d2e46;
 
 }
 
@@ -36,7 +38,7 @@
 
 .Services .Button{
     
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 140px;
     height: 45px;
     font-family: 'Roboto', sans-serif; 
@@ -56,10 +58,10 @@
 }
 
 .Services .Button:hover {
-    background-color: #a26769;
-    box-shadow: 0px 15px 20px rgba(162, 103, 105);
+    background-color: #6d2e46;
+    box-shadow: 0px 7px 12px #6d2e46;
     color: #ffffff;
-    transform: translate(-7px);
+    transform: translate(-5px);
 }
 
 

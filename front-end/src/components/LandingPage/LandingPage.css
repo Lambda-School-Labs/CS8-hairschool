@@ -4,7 +4,6 @@
 
 .LandingPage {
     height: 54.3rem;
-    top: 0px;
     background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
 }
 
@@ -14,7 +13,8 @@
     height: 8%;
     margin-bottom: 1%;
     margin-top: 0%;
-    padding: 1%;
+	padding: 1%;
+	font-size: 1.2rem;
   }
   
 .link {
@@ -25,7 +25,7 @@
 }  
 
 .link:hover {
-	color: black;
+	color: orange;
 }
 
 .LandingTitle {
@@ -48,7 +48,5 @@
 	width: 10%;
 	height: 7%;
 	color: white;
-	background: #6d2e46;
-	font-size: 20%;
-	
+	background-color: #6d2e46;
 }
