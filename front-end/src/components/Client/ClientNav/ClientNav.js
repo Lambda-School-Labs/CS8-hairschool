@@ -11,15 +11,12 @@ class ClientNav extends React.Component {
             <div className="ClientNav">               
                 <Navbar>
                     
-                    <Nav>
-                    <Navbar.Toggle/>
-                    
-                   <NavItem eventKey={1} href='/' activeStyle={ {background: 'lightBlue'} }> Home</NavItem>
+                    <Nav>                   
+                   <NavItem eventKey={1} href='/'> Home</NavItem>
                    <NavItem eventKey={2} href='/User/Schedule' activeStyle={ {background: 'lightBlue'} }>  Scheduling </NavItem> 
                    <NavItem eventKey={3} href='/User/Feedback' activeStyle={ {background: 'lightBlue'} }> Feedback</NavItem>
                    <NavItem eventKey={4} href='/User/Billing' activeStyle={ {background: 'lightBlue'} }> Billing</NavItem>
                    <NavItem eventKey={5} href='/User/Settings' activeStyle={ {background: 'lightBlue'} }> Settings</NavItem>
-                   
                    </Nav>
                 
                 </Navbar>

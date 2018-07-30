@@ -1,6 +1,7 @@
 import React from 'react';
 import './Settings.css';
 import ClientNav from '../ClientNav/ClientNav';
+import { Link } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
 
 class Settings extends React.Component {
@@ -8,11 +9,17 @@ class Settings extends React.Component {
     render() {
         return (
             <div className="Settings">
-                <Row>
+                <nav className="App-header">
+                        <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>
+                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
+                        <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
+                </nav> 
+                <Row className="Container">
                     <Col sm="3">
                         <ClientNav/>
                     </Col>
                     <Col sm="4">
+                    <div className="Title"> Settings </div>
                         <Form>
                             <FormGroup className="FormLeft">
                                 <FormGroup>
