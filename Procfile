@@ -1,1 +1,1 @@
-web: gunicorn CS8-hairschool/back_end/back_end.wsgi
+web: gunicorn back_end.wsgi
