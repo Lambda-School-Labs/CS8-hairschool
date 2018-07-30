@@ -1,15 +1,32 @@
-.ClientFeedback .FeedbackForm {
-    background-color: #ece2d0;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-bottom: 30px;
-    
+.ClientFeedback {
+    height: 54.3rem;
+    background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
 }
 
+.ClientFeedback .Container {
+    margin: 2%;
+}
+
+.ClientFeedback .FeedbackContainer {
+    border: 5px solid #6d2e46;
+    background: rgb(135, 135, 179);
+    padding: 2%;
+}
 .ClientFeedback .FeedbackForm .FeedbackFormat {
     display: flex;
     justify-content: center;
-    margin: 20px 20px 20px;
+   
+    margin-top: 3%;
 }
 
+.StarGuide {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.StarGuide {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+}

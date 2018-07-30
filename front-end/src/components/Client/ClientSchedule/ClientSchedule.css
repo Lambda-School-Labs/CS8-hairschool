@@ -60,7 +60,7 @@
 .Services .Button:hover {
     background-color: #6d2e46;
     box-shadow: 0px 7px 12px #6d2e46;
-    color: #ffffff;
+    color: orange;
     transform: translate(-5px);
 }
 

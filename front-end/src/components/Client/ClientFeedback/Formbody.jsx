@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, ButtonGroup, Glyphicon, Panel, Row, Form, FormGroup, FormControl, HelpBlock, ControlLabel} from 'react-bootstrap'
+import {Button, ButtonGroup, Glyphicon, Panel, Row, Col, Form, FormGroup, FormControl, HelpBlock, ControlLabel} from 'react-bootstrap'
 
 
 class FeedbackForm extends Component {
@@ -14,7 +14,7 @@ class FeedbackForm extends Component {
 
         };
 
-    }
+    } 
 
 
         getValidationState() {
@@ -31,20 +31,15 @@ class FeedbackForm extends Component {
 
     render(){
 
-        // function FieldGroup({id, label, help, ...props}) {
-        //     return (
-        //         <FormGroup controlId={id}>
-        //             <ControlLabel>{label}</ControlLabel>
-        //             <FormControl {...props}/>
-        //         </FormGroup>
-        //     )
-        // }
-
         return(
             <div className="Formheader">
            
             <Form>
-                
+                <Row className="StarGuide"> 
+                    <div className="StarItem"><Glyphicon glyph="star"/> = Needs Improvement</div>
+                    <div className="StarItem"><Glyphicon glyph="star"/><Glyphicon glyph="star"/> = Fair Service</div>
+                    <div className="StarItem"><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/> = Great Service</div>
+                </Row>
                 <Row>
                     <FormGroup
                         controlId="FeedBackForm"

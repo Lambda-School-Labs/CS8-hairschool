@@ -33,16 +33,16 @@ class ClientSchedule extends React.Component {
                 </nav>          
                 <Row className="Container">
                 
-                    <Col sm={2}  >
+                    <Col sm="2"  >
                         <ClientNav/>
                     </Col>
                     
-                    <Col sm={9}>                
+                    <Col sm="9">                
                         <div className="Title"> Schedule with Lambda School </div>
                     
                         <div className="Services">
                                 <Row className="serviceContainer">
-                                    <Col sm={4}>
+                                    <Col sm="4">
                                         <ul className="Buttons">
                                             <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Hair $20</Button></li>
                                             <li style={{listStyleType: "none"}}><Button div className="Button" bsSize="large">Cut & Color $30</Button></li>
@@ -51,12 +51,12 @@ class ClientSchedule extends React.Component {
                                             <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Barbering $20</Button></li>
                                         </ul>
                                     </Col>                                         
-                                    <Col sm={4}>
+                                    <Col sm="4">
                                         <div className="Dropboxx"> 
                                             <Dropboxx/>
                                         </div>
                                     </Col>
-                                    <Col sm={4}>
+                                    <Col sm="4">
                                         <div classname="Calendar">
                                             <Calendar/>
                                         </div>
