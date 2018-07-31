@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 
 .ClientSchedule{
     height: 54.3rem;
     background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
+=======
+<<<<<<< HEAD
+.ClientSchedule{
+    text-align: left;
+    justify-content: center;
+=======
+
+.ClientSchedule{
+    height: 54.3rem;
+    background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
+>>>>>>> ad42eabac6bf37e19a4a1d14b9b7a820ee9f6cd9
+>>>>>>> master
 }
 
 .ClientSchedule .Container{
@@ -14,6 +27,32 @@
 .ClientSchedule .Title {
     margin-right: 15%;
     font-size: 25pt;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    color: #6d2e46;
+    text-shadow: 3px #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+    align-items: center;
+   
+    
+    
+}
+
+.ClientSchedule .Services .Dropboxx{
+
+    /* padding-right: 10px;
+    padding-left: 50px;
+    margin: 20px; */
+}
+
+.ClientSchedule .Services .Calendar {
+    /* margin: 20px; */
+=======
+>>>>>>> master
     color: white;
     text-shadow: 2px #000000;
     font-family: 'Poiret One', cursive;
@@ -33,6 +72,10 @@
 
 .button {
     background-color: #6d2e46;
+<<<<<<< HEAD
+=======
+>>>>>>> ad42eabac6bf37e19a4a1d14b9b7a820ee9f6cd9
+>>>>>>> master
 }
 
 
