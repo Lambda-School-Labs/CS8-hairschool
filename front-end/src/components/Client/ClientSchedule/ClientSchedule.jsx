@@ -1,22 +1,11 @@
 import React from 'react';
 import './ClientSchedule.css';
 import ClientNav from '../ClientNav/ClientNav';
-import DatePicker from 'react-date-picker';
-import {Button} from 'reactstrap';
-
-require('react-datetime');
-
-
+import { Link } from 'react-router-dom';
 import {Button,Row, Col, Grid, Jumbotron, PanelTitle} from 'react-bootstrap';
 import './ClientSchedule.css';
 import Dropboxx from './Dropbox'; 
 import Calendar from './Calendar';
-
-
-
-// require('react-datetime');
-
-// const buttStyles = {maxWidth: 400, margin: '0 auto 10px'};
 
 class ClientSchedule extends React.Component {
     constructor(props){
@@ -35,69 +24,50 @@ class ClientSchedule extends React.Component {
     render () {
         return (
         
-            <div className="ClientSchedule">
-<<<<<<< HEAD
-            
-                <Row>
+            <div className="ClientSchedule"> 
+
+                <nav className="App-header">
+                        <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>
+                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
+                        <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
+                </nav>          
+                <Row className="Container">
                 
-                    <Col sm={3}  >
+                    <Col sm={2}  >
                         <ClientNav/>
                     </Col>
                     
-                <Col sm={9}>
-                
-                    <div className="Title">Schedule with Lambda School </div>
-                 
-                    <div className="Services">
-
-                            <Row>
-                                <Col sm={4}>
-                                            <ul className="Buttons">
-
-                                                <li><Button div className= "Button" bsSize="large">Hair $20</Button></li>
-                                                <li><Button div className="Button" bsSize="large">Cut & Color $30</Button></li>
-                                                <li><Button div className= "Button" bsSize="large">Extensions $40</Button></li>
-                                                <li><Button div className= "Button" bsSize="large">Color $20</Button></li>
-                                                <li><Button div className= "Button" bsSize="large">Barbering $20</Button></li>
-                                            </ul>
-                                        </Col>
-                                         
-                                        <Col sm={4}>
-                                                <div className="Dropboxx"> 
-                                                    <Dropboxx/>
-                                                </div>
-                                        </Col>
-                                        <Col sm={4}>
-                                                <div classname="Calendar">
-                                                        <Calendar/>
-                                                </div>
-                                        </Col>
-                                    </Row>
-                                </div> 
-                </Col> 
+                    <Col sm={9}>                
+                        <div className="Title"> Schedule with Lambda School </div>
+                    
+                        <div className="Services">
+                                <Row className="serviceContainer">
+                                    <Col sm={4}>
+                                        <ul className="Buttons">
+                                            <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Hair $20</Button></li>
+                                            <li style={{listStyleType: "none"}}><Button div className="Button" bsSize="large">Cut & Color $30</Button></li>
+                                            <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Extensions $40</Button></li>
+                                            <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Color $20</Button></li>
+                                            <li style={{listStyleType: "none"}}><Button div className= "Button" bsSize="large">Barbering $20</Button></li>
+                                        </ul>
+                                    </Col>                                         
+                                    <Col sm={4}>
+                                        <div className="Dropboxx"> 
+                                            <Dropboxx/>
+                                        </div>
+                                    </Col>
+                                    <Col sm={4}>
+                                        <div classname="Calendar">
+                                            <Calendar/>
+                                        </div>
+                                    </Col>
                                 </Row>
+                            </div> 
+
+                        </Col> 
+                </Row>
                            
                   
-=======
-               <ClientNav/>
-               <div className="Title"> Schedule with Lambda Hair School</div>
-               <div className="Container0">
-               <div className="Services">
-               <ul><button>Hair $20</button></ul>
-               <Button color="success" size="large"> Cut & Color </Button>
-               <ul><Button color="success" size="large"> Extenstions $40 </Button></ul>
-               <ul><Button> Color $20 </Button></ul>
-               <ul><Button> Barbering </Button></ul>
-               </div>
-               <div className="Stylists"> Drop down Stylist List Here</div>
-               <div className="Calender"> <DatePicker
-               onChange={this.onChange}
-               value={this.state.date}
-               />
-               </div> 
-               Calendar HERE WITH TIMES 
-               </div>
->>>>>>> master
             </div>
         
             
