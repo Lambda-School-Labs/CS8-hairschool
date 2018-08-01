@@ -1,12 +1,13 @@
-.SignUp {
+.SignUp {  
+    height: 100vh;
     display: flex;
     flex-direction: column ;
     justify-content: center;
-    height: 54.3rem;
     background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
 }
 
 .SignUpTitle {
+    margin-top: 5%;
     margin-left: 42%;
     font-size: 4rem;
     color: white;
@@ -15,6 +16,7 @@
 }
 
 .SignUpForm { 
+    
     margin-left:33%;
     height: 40%;
     width: 30%;

@@ -1,5 +1,5 @@
 .ClientFeedback {
-    height: 54.3rem;
+    height: 100vh;
     background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
 }
 
@@ -9,7 +9,7 @@
 
 .ClientFeedback .FeedbackContainer {
     border: 5px solid #6d2e46;
-    background: rgb(135, 135, 179);
+    background: white;
     padding: 2%;
 }
 .ClientFeedback .FeedbackForm .FeedbackFormat {
