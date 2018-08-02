@@ -5,9 +5,15 @@
 
 .Settings .Container{
     margin: 2%;
-
     
 }
+
+.SettingsFormContainer {
+    background: white;
+    padding: 2%;
+    border: 5px solid #6d2e46;
+}
+
 
 .Settings .Title {
     margin-right: 15%;

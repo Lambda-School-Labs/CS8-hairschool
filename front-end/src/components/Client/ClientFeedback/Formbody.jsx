@@ -36,9 +36,11 @@ class FeedbackForm extends Component {
            
             <Form>
                 <Row className="StarGuide"> 
+               
                     <div className="StarItem"><Glyphicon glyph="star"/> = Needs Improvement</div>
                     <div className="StarItem"><Glyphicon glyph="star"/><Glyphicon glyph="star"/> = Fair Service</div>
                     <div className="StarItem"><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/> = Great Service</div>
+                
                 </Row>
                 <Row className="FeedbackForm">
                     <Col sm="6">
@@ -111,7 +113,7 @@ class FeedbackForm extends Component {
                             /> 
                         </FormGroup>
                     </Col>
-
+                    <Col sm="6">
                     <FormGroup
                         controlId="Styling"
                         validationState={this.getValidationState()}> 
@@ -157,9 +159,10 @@ class FeedbackForm extends Component {
                             onChange={this.handleChange}
                         />
                     </FormGroup> 
+                    </Col>
 
-                    <FormControl.Feedback/>
-                    <HelpBlock> Thanks for your Feedback! </HelpBlock>
+                    <button className="FeedbackButton"> Submit </button>
+                    
                 
                 </Row>
                 
