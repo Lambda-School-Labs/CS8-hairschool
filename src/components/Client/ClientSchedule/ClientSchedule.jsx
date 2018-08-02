@@ -1,11 +1,20 @@
 import React from 'react';
 import './ClientSchedule.css';
 import ClientNav from '../ClientNav/ClientNav';
+import DatePicker from 'react-date-picker';
 import { Link } from 'react-router-dom';
 import {Button,Row, Col, Grid, Jumbotron, PanelTitle} from 'react-bootstrap';
 import './ClientSchedule.css';
 import Dropboxx from './Dropbox'; 
 import Calendar from './Calendar';
+
+require('react-datetime');
+
+
+
+// require('react-datetime');
+
+// const buttStyles = {maxWidth: 400, margin: '0 auto 10px'};
 
 class ClientSchedule extends React.Component {
     constructor(props){
@@ -24,6 +33,10 @@ class ClientSchedule extends React.Component {
     render () {
         return (
         
+            <div className="ClientSchedule">
+            
+                <Row>
+
             <div className="ClientSchedule"> 
 
                 <nav className="App-header">
@@ -31,9 +44,8 @@ class ClientSchedule extends React.Component {
                         <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
                         <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
                 </nav>          
-                <Row className="Container">
-                
-                    <Col sm="2"  >
+                <Row className="Container">  
+                    <Col sm={2}  >
                         <ClientNav/>
                     </Col>
                     
@@ -68,8 +80,10 @@ class ClientSchedule extends React.Component {
                 </Row>
                            
                   
-
             </div>
+
+            </Row>
+          </div>  
         
             
         )

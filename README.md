@@ -1,1 +1,1 @@
-Lambda Hair School
+CS8 Hair School
