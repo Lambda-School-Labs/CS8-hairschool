@@ -7,3 +7,8 @@ from . import serializers
 class UserListView(generics.ListCreateAPIView):
     queryset = models.CustomUser.objects.all()
     serializer_class = serializers.UserSerializer
+
+
+class AppointmentListView(generics.ListCreateAPIView):
+    queryset = models.Appointment.objects.all()
+    serializer_class = serializers.AppointmentSerializer
