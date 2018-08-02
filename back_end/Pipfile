@@ -9,6 +9,10 @@ djangorestframework = "*"
 django-rest-auth = "*"
 django-allauth = "*"
 djangorestframework-jwt = "*"
+gunicorn = "*"
+dj-database-url = "*"
+python-decouple = "*"
+whitenoise = "*"
 
 [dev-packages]
 
