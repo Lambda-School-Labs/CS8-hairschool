@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, ButtonGroup, Glyphicon, Panel, Row, Form, FormGroup, FormControl, HelpBlock, ControlLabel} from 'react-bootstrap'
+import {Button, ButtonGroup, Glyphicon, Panel, Row, Col, Form, FormGroup, FormControl, HelpBlock, ControlLabel} from 'react-bootstrap'
 
 
 class FeedbackForm extends Component {
@@ -14,7 +14,7 @@ class FeedbackForm extends Component {
 
         };
 
-    }
+    } 
 
 
         getValidationState() {
@@ -31,66 +31,69 @@ class FeedbackForm extends Component {
 
     render(){
 
-        // function FieldGroup({id, label, help, ...props}) {
-        //     return (
-        //         <FormGroup controlId={id}>
-        //             <ControlLabel>{label}</ControlLabel>
-        //             <FormControl {...props}/>
-        //         </FormGroup>
-        //     )
-        // }
-
         return(
             <div className="Formheader">
            
             <Form>
+                <Row className="StarGuide"> 
+               
+                    <div className="StarItem"><Glyphicon glyph="star"/> = Needs Improvement</div>
+                    <div className="StarItem"><Glyphicon glyph="star"/><Glyphicon glyph="star"/> = Fair Service</div>
+                    <div className="StarItem"><Glyphicon glyph="star"/><Glyphicon glyph="star"/><Glyphicon glyph="star"/> = Great Service</div>
                 
-                <Row>
-                    <FormGroup
-                        controlId="FeedBackForm"
-                        validationState={this.getValidationState()}>
-                        <ButtonGroup classname="star-rating">
-                            <Button bsSize="large">
-                                <Glyphicon glyph="star"/>
-                            </Button>
-                            <Button bsSize="large">
-                                <Glyphicon glyph="star"/>
-                            </Button>
-                            <Button bsSize="large">
-                                <Glyphicon glyph="star"/>
-                             </Button>
-                        </ButtonGroup>
-                    
+                </Row>
+                <Row className="FeedbackForm">
+                    <Col sm="6">
+                        <FormGroup
+                            controlId="Consultation"
+                            validationState={this.getValidationState()}>
+                            <ButtonGroup classname="star-rating">
+                                <Button bsSize="large">
+                                    <Glyphicon glyph="star"/>
+                                </Button>
+                                <Button bsSize="large">
+                                    <Glyphicon glyph="star"/>
+                                </Button>
+                                <Button bsSize="large">
+                                    <Glyphicon glyph="star"/>
+                                 </Button>
+                            </ButtonGroup>                   
                             <ControlLabel>Consultation </ControlLabel>
-                                <FormControl 
-                                    type="text"
-                                    value={this.state.value}
-                                    placeholder="Notes"
-                                    onChange={this.handleChange}
-                                /> 
-                    
-                           
-                        <ButtonGroup classname="star-rating">
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>         
-                     
-                                <ControlLabel>Customer Serivce </ControlLabel>
-                                    <FormControl 
+                            <FormControl 
                                         type="text"
                                         value={this.state.value}
                                         placeholder="Notes"
                                         onChange={this.handleChange}
-                                /> 
-
-                    <ButtonGroup classname="star-rating">
+                            /> 
+                        </FormGroup>
+                        
+                        <FormGroup
+                            controlId="CustomerService"
+                            validationState={this.getValidationState()}>  
+                            <ButtonGroup classname="star-rating">
+                                <Button bsSize="large">
+                                    <Glyphicon glyph="star"/>
+                                </Button>
+                                <Button bsSize="large">
+                                    <Glyphicon glyph="star"/>
+                                </Button>
+                                <Button bsSize="large">
+                                    <Glyphicon glyph="star"/>
+                                </Button>
+                            </ButtonGroup>                             
+                            <ControlLabel>Customer Serivce </ControlLabel>
+                            <FormControl 
+                                    type="text"
+                                    value={this.state.value}
+                                    placeholder="Notes"
+                                    onChange={this.handleChange}
+                            /> 
+                        </FormGroup>
+    
+                        <FormGroup
+                            controlId="Time"
+                            validationState={this.getValidationState()}> 
+                            <ButtonGroup classname="star-rating">
                                 <Button bsSize="large">
                                     <Glyphicon glyph="star"/>
                                 </Button>
@@ -101,62 +104,66 @@ class FeedbackForm extends Component {
                                     <Glyphicon glyph="star"/>
                                 </Button>
                             </ButtonGroup>
-                        
-
                             <ControlLabel>On Time? </ControlLabel>
-                                <FormControl 
-                                    type="text"
-                                    value={this.state.value}
-                                    placeholder="Notes"
-                                    onChange={this.handleChange}
-                                /> 
+                            <FormControl 
+                                type="text"
+                                value={this.state.value}
+                                placeholder="Notes"
+                                onChange={this.handleChange}
+                            /> 
+                        </FormGroup>
+                    </Col>
+                    <Col sm="6">
+                    <FormGroup
+                        controlId="Styling"
+                        validationState={this.getValidationState()}> 
+                        <ButtonGroup classname="star-rating">
+                            <Button bsSize="large">
+                                <Glyphicon glyph="star"/>
+                            </Button>
+                            <Button bsSize="large">
+                                <Glyphicon glyph="star"/>
+                            </Button>
+                            <Button bsSize="large">
+                                <Glyphicon glyph="star"/>
+                            </Button>
+                        </ButtonGroup>
+                        <ControlLabel>Styling </ControlLabel>
+                        <FormControl 
+                           type="text"
+                           value={this.state.value}
+                           placeholder="Notes"
+                           onChange={this.handleChange}
+                        />
+                    </FormGroup> 
 
-                    <ButtonGroup classname="star-rating">
-                        <Button bsSize="large">
-                            <Glyphicon glyph="star"/>
-                        </Button>
-                        <Button bsSize="large">
-                            <Glyphicon glyph="star"/>
-                        </Button>
-                        <Button bsSize="large">
-                            <Glyphicon glyph="star"/>
-                        </Button>
-                    </ButtonGroup>
-        
-
-
-                     <ControlLabel>Styling </ControlLabel>
-                         <FormControl 
-                            type="text"
-                            value={this.state.value}
-                            placeholder="Notes"
-                            onChange={this.handleChange}
-                         /> 
-
-                         <ButtonGroup classname="star-rating">
-                         <Button bsSize="large">
-                             <Glyphicon glyph="star"/>
-                         </Button>
-                         <Button bsSize="large">
-                             <Glyphicon glyph="star"/>
-                         </Button>
-                         <Button bsSize="large">
-                             <Glyphicon glyph="star"/>
-                         </Button>
-                     </ButtonGroup>
-
-
-                    <ControlLabel>Overall Score </ControlLabel>
+                    <FormGroup
+                        controlId="Overall"
+                        validationState={this.getValidationState()}> 
+                        <ButtonGroup classname="star-rating">
+                            <Button bsSize="large">
+                                 <Glyphicon glyph="star"/>
+                            </Button>
+                            <Button bsSize="large">
+                                <Glyphicon glyph="star"/>
+                            </Button>
+                            <Button bsSize="large">
+                                <Glyphicon glyph="star"/>
+                            </Button>
+                        </ButtonGroup>
+                        <ControlLabel>Overall Score </ControlLabel>
                         <FormControl 
                             type="text"
                             value={this.state.value}
                             placeholder="Notes"
                             onChange={this.handleChange}
-                        /> 
+                        />
+                    </FormGroup> 
+                    </Col>
 
-                            <FormControl.Feedback/>
-                                <HelpBlock> Thanks for your Feedback! </HelpBlock>
-                </FormGroup>
+                    <button className="FeedbackButton"> Submit </button>
+                    
+                
                 </Row>
                 
             </Form>

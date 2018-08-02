@@ -1,15 +1,43 @@
-.ClientFeedback .FeedbackForm {
-    background-color: #ece2d0;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-bottom: 30px;
+.ClientFeedback {
+    height: 100vh;
+    background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
+}
+
+.ClientFeedback .Container {
+    margin: 2%;
+}
+
+.ClientFeedback .Title {
+    margin-right: 15%;
+    font-size: 3.3rem;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+.ClientFeedback .FeedbackContainer {
+    border: 5px solid #6d2e46;
+    background: white;
+    padding: 1.2%;
+}
+.ClientFeedback .FeedbackForm .FeedbackFormat {
+   padding: 1.5%;
+    margin-top: 3%;
+}
+
+.StarGuide {  
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+    font-size:150%;
     
 }
 
-.ClientFeedback .FeedbackForm .FeedbackFormat {
-    display: flex;
-    justify-content: center;
-    margin: 20px 20px 20px;
+.StarItem {   
+    margin-right: 5%;
 }
 
+.FeedbackButton {
+    margin-left: 45%;
+}

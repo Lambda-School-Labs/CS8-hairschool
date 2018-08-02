@@ -18,7 +18,7 @@ class Billing extends Component {
                         <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
                 </nav> 
                 <Row className="Container">
-                    <Col sm="3">
+                    <Col sm="2">
                         <ClientNav/>
                     </Col>
                     <Col sm="9">
