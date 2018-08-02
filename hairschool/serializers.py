@@ -11,3 +11,13 @@ class AppointmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Appointment
         fields = ('date', 'time', 'Stylist', 'Service', )
+
+class ServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Service
+        fields = ( 'styling', 'price', )
+
+class StylistSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Stylist
+        fields = ( 'full_name', 'availability', )
