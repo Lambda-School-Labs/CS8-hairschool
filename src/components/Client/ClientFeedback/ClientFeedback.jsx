@@ -22,21 +22,24 @@ class ClientFeedback extends React.Component {
                     <Col sm="2">
                         <ClientNav />
                     </Col>
-                    <Col sm="9" className="FeedbackContainer">
-                        <div className="AppointmentInfo"> 
-                            <FeedbackDrop/>
-                        </div>
-
-                        <div className="FeedbackForm">
-                            <Panel className="FeedbackFormat">
-                                <Panel.Body>
-                                    <FeedbackForm/>
-                                </Panel.Body>
-                            </Panel>
-                        </div>
-
-                        <div className="SubmitButton"></div>
-                        <Button size="lg" color="primary"> Submit </Button>
+                    
+                    <Col sm="9" >
+                        <div className="Title"> Feedback </div>
+                        <Row className="FeedbackContainer">
+                            <Col sm="12">
+                                    <div className="AppointmentInfo"> 
+                                        <FeedbackDrop/>
+                                    </div>
+                               
+                                    <div className="FeedbackForm">
+                                        <Panel className="FeedbackFormat">
+                                            
+                                                <FeedbackForm/>
+                                            
+                                        </Panel>
+                                    </div>       
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </div>

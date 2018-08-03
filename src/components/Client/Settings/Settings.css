@@ -1,13 +1,19 @@
 .Settings{
-    height: 54.3rem;
+    height: 100vh;
     background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
 }
 
 .Settings .Container{
     margin: 2%;
-
     
 }
+
+.SettingsFormContainer {
+    background: white;
+    padding: 2%;
+    border: 5px solid #6d2e46;
+}
+
 
 .Settings .Title {
     margin-right: 15%;
