@@ -9,7 +9,7 @@ class SignIn extends React.Component {
     //holds data as user types it
     constructor (props) {
         super (props);
-        this.login = { email:"", password: ""};
+        this.login = { username: "", email:"", password: ""};
         this.URL = "http://127.0.0.1:8000";
         this.state = {
             showNoEmailError: false,
@@ -29,7 +29,6 @@ class SignIn extends React.Component {
     showNoEmailError() {
         return <div className="errorMessage"> Sorry! Please enter your email! </div>
     }
-
     showNoPasswordError() {
         return <div className="errorMessage"> Sorry! Please enter a valid password! </div>
     }
