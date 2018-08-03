@@ -24,6 +24,10 @@ class SignIn extends React.Component {
 		this.login[name] = value;
 	};
 
+	clearAllErrors() {
+		this.setState({ showNoEmailError: false, showNoPasswordError: false });
+	}
+
 	//error messages
 	showNoEmailError() {
 		return (
@@ -41,7 +45,7 @@ class SignIn extends React.Component {
 	}
 
 	buttonHandler(login, history) {
-        const { username, password } = login;
+		const { username, password } = login;
 		if (username === "") this.setState({ showNoEmailError: true });
 		if (password === "") this.setState({ showNoPasswordError: true });
 		axios
@@ -51,7 +55,7 @@ class SignIn extends React.Component {
 				history.push("User/Schedule");
 			})
 			.catch(err => {
-				console.log("error",err);
+				console.log("error", err);
 			});
 	}
 
@@ -62,7 +66,7 @@ class SignIn extends React.Component {
 
 				<Form className="SignInForm">
 					<FormGroup>
-						<Label for="Username">Username: </Label>
+						<Label for="Username">Email: </Label>
 						<Input
 							type="text"
 							name="username"
@@ -86,8 +90,7 @@ class SignIn extends React.Component {
 						color="purple"
 						size="lg"
 					>
-						{" "}
-						Sign In{" "}
+						Sign In
 					</Button>
 					<div>
 						No account?<Link
