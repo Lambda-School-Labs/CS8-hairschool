@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .models import CustomUser , Appointment, Service, Stylist
+from .models import CustomUser , Appointment, Service, Stylist , User_Feedback
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -33,3 +33,9 @@ class CreateStylist(forms.ModelForm):
         model = Stylist
         fields = ( 'full_name', 'availability', )        
 
+class CreateUser_Feedback(forms.ModelForm):
+    class Meta:
+        model = User_Feedback
+        fields = ( 'Stylist', 'Service','Time',
+                   'Consultation','Notes','On_time','Notes','Styling','Notes',
+                   'Customer_Service','Notes','Overall','Notes',)

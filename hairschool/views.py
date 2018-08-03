@@ -20,3 +20,8 @@ class ServiceListView(generics.ListCreateAPIView):
 class StylistListView(generics.ListCreateAPIView):
     queryset = models.Stylist.objects.all()
     serializer_class = serializers.StylistSerializer
+
+
+class User_FeedbackListView(generics.ListCreateAPIView):
+    queryset = models.User_Feedback.objects.all()
+    serializer_class = serializers.User_FeedbackSerializer
