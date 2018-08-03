@@ -25,12 +25,14 @@ class AppointmentListView(generics.ListCreateAPIView):
     queryset = models.Appointment.objects.all()
     serializer_class = serializers.AppointmentSerializer
 
-# Services Views
 class ServiceListView(generics.ListCreateAPIView):
     queryset = models.Service.objects.all()
     serializer_class = serializers.ServiceSerializer
 
-# Stylist Views
 class StylistListView(generics.ListCreateAPIView):
     queryset = models.Stylist.objects.all()
     serializer_class = serializers.StylistSerializer
+
+class User_FeedbackListView(generics.ListCreateAPIView):
+    queryset = models.User_Feedback.objects.all()
+    serializer_class = serializers.User_FeedbackSerializer
