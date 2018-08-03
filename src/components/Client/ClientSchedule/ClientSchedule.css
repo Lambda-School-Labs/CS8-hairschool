@@ -1,11 +1,12 @@
 
 .ClientSchedule{
-    height: 54.3rem;
+    height: 100vh;
     background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
 }
 
 .ClientSchedule .Container{
     margin: 2%;
+    margin-bottom: 3.9%;
     
 }
 

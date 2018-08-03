@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "C:\\Users\\John\\.virtualenvs\\CS8-hairschool-Tm_mdojm\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "black"
+}
