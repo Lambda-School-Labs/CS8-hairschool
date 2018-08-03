@@ -10,7 +10,7 @@ class SignIn extends React.Component {
     constructor (props) {
         super (props);
         this.login = { email:"", password: ""};
-        this.URL = "https://dashboard.heroku.com/apps/john-cs8-hairschool";
+        this.URL = "https://john-cs8-hairschool.herokuapp.com/";
         this.state = {
             showNoEmailError: false,
             showNoPasswordError: false
