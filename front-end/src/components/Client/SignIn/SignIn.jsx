@@ -29,7 +29,6 @@ class SignIn extends React.Component {
     showNoEmailError() {
         return <div className="errorMessage"> Sorry! Please enter your email! </div>
     }
-
     showNoPasswordError() {
         return <div className="errorMessage"> Sorry! Please enter a valid password! </div>
     }

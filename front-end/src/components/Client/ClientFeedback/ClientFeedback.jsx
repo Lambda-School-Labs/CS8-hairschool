@@ -10,6 +10,20 @@ import {Panel, Button} from 'react-bootstrap';
 
 class ClientFeedback extends React.Component {
 
+    constructor(props) {
+        super (props);
+        this.state = {
+            stylists:[],
+            feedbackRating:"",
+            feedbackTitle:"",
+            feedbackContent:""
+        }
+    }
+
+    componentDidMount() {
+        
+    }
+
     render () {
         return (
             <div className="ClientFeedback">
@@ -32,10 +46,8 @@ class ClientFeedback extends React.Component {
                                     </div>
                                
                                     <div className="FeedbackForm">
-                                        <Panel className="FeedbackFormat">
-                                            
-                                                <FeedbackForm/>
-                                            
+                                        <Panel className="FeedbackFormat">                                          
+                                                <FeedbackForm/>                                        
                                         </Panel>
                                     </div>       
                             </Col>

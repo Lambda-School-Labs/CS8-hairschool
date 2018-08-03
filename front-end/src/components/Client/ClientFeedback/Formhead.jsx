@@ -28,12 +28,6 @@ const services = [
     {value: 'barbering', label:'Barbering'},
 ]
 
-const Dates = [':(']
-
-const time = [
-    {value: 'sad face', label:':('},
-   
-]
 
 
 
@@ -58,7 +52,7 @@ class FeedbackDrop extends Component {
         return(
             <div className="Feedback">
                 <Row> 
-                    <Col sm="3">
+                    <Col sm="6">
                         <div className="Feedback-stylist">
                             <Select placeholder="Stylists"
                                 value={selectedOption}
@@ -66,7 +60,7 @@ class FeedbackDrop extends Component {
                                 options={stylists}/>
                         </div>   
                     </Col>
-                    <Col sm="3">
+                    <Col sm="6">
                         <div className="Feedback-services">
                             <Select placeholder="Service"
                                 value={selectedOption}
@@ -74,22 +68,7 @@ class FeedbackDrop extends Component {
                                 options={services}/>
                         </div>
                     </Col>
-                    <Col sm="3">
-                        <div className="Feedback-date">
-                            <Select placeholder="Date"
-                                value={selectedOption}
-                                onChange={this.handleChange}
-                                options={Dates}/>
-                        </div>
-                    </Col>
-                    <Col sm="3">
-                        <div className="Feedback-time">
-                            <Select placeholder="Time"
-                                value={selectedOption}
-                                onChange={this.handleChange}
-                                options={time}/>
-                        </div>
-                    </Col>
+                    
                 </Row>
             </div>
 

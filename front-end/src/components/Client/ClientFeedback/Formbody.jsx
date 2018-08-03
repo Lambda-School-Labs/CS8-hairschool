@@ -16,7 +16,6 @@ class FeedbackForm extends Component {
 
     } 
 
-
         getValidationState() {
             const length = this.state.value.length;
             if (length > 3) return 'success';
@@ -62,7 +61,7 @@ class FeedbackForm extends Component {
                             <FormControl 
                                         type="text"
                                         value={this.state.value}
-                                        placeholder="Notes"
+                                        placeholder="Feedback"
                                         onChange={this.handleChange}
                             /> 
                         </FormGroup>
@@ -85,7 +84,7 @@ class FeedbackForm extends Component {
                             <FormControl 
                                     type="text"
                                     value={this.state.value}
-                                    placeholder="Notes"
+                                    placeholder="Feedback"
                                     onChange={this.handleChange}
                             /> 
                         </FormGroup>
@@ -108,7 +107,7 @@ class FeedbackForm extends Component {
                             <FormControl 
                                 type="text"
                                 value={this.state.value}
-                                placeholder="Notes"
+                                placeholder="Feedback"
                                 onChange={this.handleChange}
                             /> 
                         </FormGroup>
@@ -132,7 +131,7 @@ class FeedbackForm extends Component {
                         <FormControl 
                            type="text"
                            value={this.state.value}
-                           placeholder="Notes"
+                           placeholder="Feedback"
                            onChange={this.handleChange}
                         />
                     </FormGroup> 
@@ -155,7 +154,7 @@ class FeedbackForm extends Component {
                         <FormControl 
                             type="text"
                             value={this.state.value}
-                            placeholder="Notes"
+                            placeholder="Feedback"
                             onChange={this.handleChange}
                         />
                     </FormGroup> 
