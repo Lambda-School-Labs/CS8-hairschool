@@ -15,6 +15,7 @@ gunicorn = "*"
 dj-database-url = "*"
 whitenoise = "*"
 request = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 "autopep8" = "*"
