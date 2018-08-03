@@ -12,3 +12,11 @@ class UserListView(generics.ListCreateAPIView):
 class AppointmentListView(generics.ListCreateAPIView):
     queryset = models.Appointment.objects.all()
     serializer_class = serializers.AppointmentSerializer
+
+class ServiceListView(generics.ListCreateAPIView):
+    queryset = models.Service.objects.all()
+    serializer_class = serializers.ServiceSerializer
+
+class StylistListView(generics.ListCreateAPIView):
+    queryset = models.Stylist.objects.all()
+    serializer_class = serializers.StylistSerializer
