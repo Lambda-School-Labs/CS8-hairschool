@@ -10,7 +10,7 @@ class SignIn extends React.Component {
     constructor (props) {
         super (props);
         this.login = { email:"", password: ""};
-        this.URL = "https://john-cs8-hairschool.herokuapp.com/";
+        this.URL = "https://john-cs8-hairschool.herokuapp.com";
         this.state = {
             showNoEmailError: false,
             showNoPasswordError: false
@@ -36,12 +36,12 @@ class SignIn extends React.Component {
 
 
     buttonHandler(login, history) {
-        let {email, password} = login;
-        if (email === "") this.setState({ showNoEmailError: true});
+        let {username, password} = login;
+        if (username === "") this.setState({ showNoEmailError: true});
         if (password === "") this.setState({ showNoPasswordError: true});
         axios
             //axios call to the endpoint to login on the server passing in email and password
-            .post(`${this.URL}/rest-auth/login`, { email, password })
+            .post(`${this.URL}/rest-auth/login`, { username, password })
             .then(res => {
                 //if no error take the token recieved and set it in localstorage to retrieve later
                 localStorage.setItem("auth_token", res.data.key);
@@ -63,7 +63,7 @@ class SignIn extends React.Component {
                 <Form className="SignInForm">
                     <FormGroup>
                         <Label for="Email">Email: </Label>
-                        <Input type="text" name="email" onChange={this.handleInputChange} />
+                        <Input type="text" name="username" onChange={this.handleInputChange} />
                     </FormGroup>
                     <FormGroup>
                         <Label for="Password">Password: </Label>
