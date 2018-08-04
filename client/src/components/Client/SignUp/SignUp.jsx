@@ -11,15 +11,14 @@ class SignUp extends React.Component {
 		this.URL = "https://john-cs8-hairschool.herokuapp.com";
 		this.state = {
 			showNoEmailError: false,
-			showNoPasswordError: false
-        };
+			showNoPasswordError: false,
+			showNoPasswordMismatch: false
+		};
 	}
 
 	showNoPasswordError() {
 		return (
-			<div className="errorMessage">
-				Sorry! Please enter a valid password!
-			</div>
+			<div className="errorMessage">Sorry! Please enter a valid password!</div>
 		);
 	}
 
@@ -28,21 +27,26 @@ class SignUp extends React.Component {
 		const value = target.value;
 		const name = target.name;
 		this.login[name] = value;
-    };
+	};
 
-    clearErrors() {
-        setTimeout(() => this.setState({ showNoEmailError: false, showNoPasswordError: false }), 2500);
-    }
-    
+	clearErrors() {
+		setTimeout(
+			() =>
+				this.setState({ showNoEmailError: false, showNoPasswordError: false }),
+			2500
+		);
+	}
+
 	//error messages
 	showNoEmailError() {
-        this.clearErrors();
+		this.clearErrors();
 		return (
 			<div className="errorMessage"> Sorry! Please enter a correct email! </div>
 		);
 	}
 
 	showNoPasswordError() {
+		this.clearErrors();
 		return (
 			<div className="errorMessage">
 				{" "}
@@ -50,26 +54,35 @@ class SignUp extends React.Component {
 			</div>
 		);
 	}
+	showNoPasswordMismatch() {
+		this.clearErrors();
+		return (
+			<div className="errorMessage"> Sorry Your passwords dont match! </div>
+		);
+	}
 
 	buttonHandler(login, history) {
 		const { username, password1, password2 } = login;
-		if (/^.+@.+\..+$/.test(username) === false) {
+		if (/^.+@.+\..+$/.test(username) === false)
 			this.setState({ showNoEmailError: true });
-		}
-		// if (password === "") this.setState({ showNoPasswordError: true });
-		axios
-			.post(`${this.URL}/rest-auth/registration/`, {
-				username,
-				password1,
-				password2
-			})
-			.then(res => {
-				localStorage.setItem("auth_token", res.data.key);
-				history.push("User/Schedule");
-			})
-			.catch(err => {
-				console.log("error", err);
-			});
+		if (password1 === "" || password2 === "")
+			this.setState({ showNoPasswordError: true });
+		if (password1 !== password2)
+			this.setState({ showNoPasswordMismatch: true });
+		else
+			axios
+				.post(`${this.URL}/rest-auth/registration/`, {
+					username,
+					password1,
+					password2
+				})
+				.then(res => {
+					localStorage.setItem("auth_token", res.data.key);
+					history.push("User/Schedule");
+				})
+				.catch(err => {
+					console.log("error", err);
+				});
 	}
 
 	render() {
@@ -105,6 +118,9 @@ class SignUp extends React.Component {
 							/>
 						</FormGroup>
 						{this.state.showNoEmailError ? this.showNoEmailError() : false}
+						{this.state.showNoPasswordMismatch
+							? this.showNoPasswordMismatch()
+							: false}
 						{this.state.showNoPasswordError
 							? this.showNoPasswordError()
 							: false}

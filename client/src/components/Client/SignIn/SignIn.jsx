@@ -24,18 +24,24 @@ class SignIn extends React.Component {
 		this.login[name] = value;
 	};
 
-	clearAllErrors() {
-		this.setState({ showNoEmailError: false, showNoPasswordError: false });
+	clearErrors() {
+		setTimeout(
+			() =>
+				this.setState({ showNoEmailError: false, showNoPasswordError: false }),
+			2500
+		);
 	}
 
 	//error messages
 	showNoEmailError() {
+		this.clearErrors();
 		return (
-			<div className="errorMessage"> Sorry! Please enter your email! </div>
+			<div className="errorMessage"> Sorry! Please enter a correct email! </div>
 		);
 	}
 
 	showNoPasswordError() {
+		this.clearErrors();
 		return (
 			<div className="errorMessage">
 				{" "}
