@@ -11,8 +11,12 @@ class FeedbackForm extends Component {
         this.state = {
             
             value:'',
-
+            name: '',
+            age: '',
+            height:''
         };
+
+        this.add
 
     } 
 
