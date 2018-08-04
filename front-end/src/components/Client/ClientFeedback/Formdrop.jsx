@@ -30,42 +30,51 @@ const services = [
 
 
 
-
 class FeedbackDrop extends Component {
+    
     state ={
-        selectedOption: null,
-        isSearchable: true,
+        selectedStylist: null,
+        selectedService: null,
 
     }
 
-    handleChange = selectedOption => {
-        this.setState({selectedOption});
-        console.log('Option selected:',selectedOption)
+    handleChange = selectedStylist => {
+        this.setState({selectedStylist});
+        console.log('Stylist selected:', selectedStylist)
+
+    }
+
+    handleChange = selectedService => {
+        this.setState({selectedService});
+        console.log('Service selected:', selectedService)
 
     }
 
 
     render(){
 
-        const {selectedOption} = this.state;
+        const {selectedStylist} = this.state;
+        const {selectedService} = this.state;
 
         return(
             <div className="Feedback">
                 <Row> 
                     <Col sm="6">
                         <div className="Feedback-stylist">
-                            <Select placeholder="Stylists"
-                                value={selectedOption}
+                            <Select placeholder="Stylists"                              
                                 onChange={this.handleChange}
+                                value={selectedStylist}
                                 options={stylists}/>
                         </div>   
                     </Col>
                     <Col sm="6">
                         <div className="Feedback-services">
-                            <Select placeholder="Service"
-                                value={selectedOption}
+                            <Select placeholder="Services"
                                 onChange={this.handleChange}
-                                options={services}/>
+                                value={selectedService}
+                                isMulti
+                                options={services}
+                                className="multiServices" />
                         </div>
                     </Col>
                     
