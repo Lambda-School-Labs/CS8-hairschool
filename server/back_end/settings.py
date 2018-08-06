@@ -28,8 +28,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-# ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS').split(',')
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # CORS Options
 CORS_ORIGIN_ALLOW_ALL = True
@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
     'hairschool',
-
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -58,7 +57,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     "djstripe",
 ]
 
@@ -164,8 +162,12 @@ REST_FRAMEWORK = {
 }
 
 # Stripe Payments
-STRIPE_LIVE_PUBLIC_KEY = os.environ.get("STRIPE_LIVE_PUBLIC_KEY", "<your publishable key>")
-STRIPE_LIVE_SECRET_KEY = os.environ.get("STRIPE_LIVE_SECRET_KEY", "<your secret key>")
-STRIPE_TEST_PUBLIC_KEY = os.environ.get("STRIPE_TEST_PUBLIC_KEY", "pk_test_PYAE19FZugfHqU5k1kCx1uCC")
-STRIPE_TEST_SECRET_KEY = os.environ.get("STRIPE_TEST_SECRET_KEY", "sk_test_4SozfCrdKf1NPbLOKQmpMPFH")
-STRIPE_LIVE_MODE = False #change to true in production
+STRIPE_LIVE_PUBLIC_KEY = os.environ.get(
+    "STRIPE_LIVE_PUBLIC_KEY", "<your publishable key>")
+STRIPE_LIVE_SECRET_KEY = os.environ.get(
+    "STRIPE_LIVE_SECRET_KEY", "<your secret key>")
+STRIPE_TEST_PUBLIC_KEY = os.environ.get(
+    "STRIPE_TEST_PUBLIC_KEY", "pk_test_PYAE19FZugfHqU5k1kCx1uCC")
+STRIPE_TEST_SECRET_KEY = os.environ.get(
+    "STRIPE_TEST_SECRET_KEY", "sk_test_4SozfCrdKf1NPbLOKQmpMPFH")
+STRIPE_LIVE_MODE = False  # change to true in production
