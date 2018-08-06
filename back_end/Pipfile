@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 django-rest-auth = "*"
-django-allauth = "*"
+[[django-allauth = "*"]]
 djangorestframework-jwt = "*"
 gunicorn = "*"
 dj-database-url = "*"
@@ -15,6 +15,7 @@ python-decouple = "*"
 whitenoise = "*"
 tox = "*"
 restauth = "*"
+dj-stripe = "*"
 
 [dev-packages]
 
