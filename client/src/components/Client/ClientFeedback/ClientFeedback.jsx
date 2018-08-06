@@ -1,14 +1,14 @@
 import React from 'react';
 import './ClientFeedback.css';
+import axios from 'axios'
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 import ClientNav from '../ClientNav/ClientNav';
 import FeedbackForm from './Formbody';
-import FeedbackDrop from './Formhead';
 import {Panel, Button} from 'react-bootstrap';
 
-
 class ClientFeedback extends React.Component {
+
 
     render () {
         return (
@@ -27,15 +27,9 @@ class ClientFeedback extends React.Component {
                         <div className="Title"> Feedback </div>
                         <Row className="FeedbackContainer">
                             <Col sm="12">
-                                    <div className="AppointmentInfo"> 
-                                        <FeedbackDrop/>
-                                    </div>
-                               
                                     <div className="FeedbackForm">
-                                        <Panel className="FeedbackFormat">
-                                            
-                                                <FeedbackForm/>
-                                            
+                                        <Panel className="FeedbackFormat">                                          
+                                            <FeedbackForm/>                                        
                                         </Panel>
                                     </div>       
                             </Col>
