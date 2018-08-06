@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
-import { Row, Col } from 'reactstrap';
 import './ClientFeedback.css'
 
 const stylists = [
@@ -57,40 +56,32 @@ class FeedbackDrop extends Component {
 
         return(
             <div className="Feedback">
-                <Row> 
-                    <Col sm="3">
-                        <div className="Feedback-stylist">
-                            <Select placeholder="Stylists"
-                                value={selectedOption}
-                                onChange={this.handleChange}
-                                options={stylists}/>
-                        </div>   
-                    </Col>
-                    <Col sm="3">
-                        <div className="Feedback-services">
-                            <Select placeholder="Service"
-                                value={selectedOption}
-                                onChange={this.handleChange}
-                                options={services}/>
-                        </div>
-                    </Col>
-                    <Col sm="3">
-                        <div className="Feedback-date">
-                            <Select placeholder="Date"
-                                value={selectedOption}
-                                onChange={this.handleChange}
-                                options={Dates}/>
-                        </div>
-                    </Col>
-                    <Col sm="3">
-                        <div className="Feedback-time">
-                            <Select placeholder="Time"
-                                value={selectedOption}
-                                onChange={this.handleChange}
-                                options={time}/>
-                        </div>
-                    </Col>
-                </Row>
+                <div className="Feedback-stylist">
+                    <Select placeholder="Stylists"
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options={stylists}/>
+                 </div>   
+                <div className="Feedback-services">
+                    <Select placeholder="Service"
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options={services}/>
+                </div>
+                <div className="Feedback-date">
+                    <Select placeholder="Date"
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options={Dates}/>
+                </div>
+
+                <div className="Feedback-time">
+                    <Select placeholder="Time"
+                        value={selectedOption}
+                        onChange={this.handleChange}
+                        options={time}/>
+                </div>
+
             </div>
 
             )
