@@ -165,14 +165,14 @@ class FeedbackForm extends Component {
                 <Row className="FeedbackForm">
                     <Col sm="6">
                             <Checkbox2>
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="needsImprovement" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="fairService" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
-                            </Checkbox2>                                          
+                                <Glyphicon className="greatService" glyph="star"/>
+                            </Checkbox2>                                         
                             <ControlLabel> Consultation </ControlLabel>
                             <FormControl 
                                 type="text"
@@ -183,13 +183,13 @@ class FeedbackForm extends Component {
                         
                         <FormGroup className="CustomerService">
                             <Checkbox2>
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="needsImprovement" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="fairService" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="greatService" glyph="star"/>
                             </Checkbox2>                               
                             <ControlLabel>Customer Serivce</ControlLabel>
                             <FormControl 
@@ -202,14 +202,14 @@ class FeedbackForm extends Component {
                     
                         <FormGroup className="Time">
                             <Checkbox2>
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="needsImprovement" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="fairService" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
-                            </Checkbox2> 
+                                <Glyphicon className="greatService" glyph="star"/>
+                            </Checkbox2>
                             <ControlLabel>On Time?</ControlLabel>
                             <FormControl 
                                 type="text"
@@ -222,13 +222,13 @@ class FeedbackForm extends Component {
                         <Col sm="6">
                         <FormGroup className="Styling"> 
                             <Checkbox2>
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="needsImprovement" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="fairService" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="greatService" glyph="star"/>
                             </Checkbox2>  
                             <ControlLabel>Styling </ControlLabel>
                             <FormControl 
@@ -241,13 +241,13 @@ class FeedbackForm extends Component {
                    
                         <FormGroup className="OverallScore">
                             <Checkbox2>
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="needsImprovement" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="fairService" glyph="star"/>
                             </Checkbox2>
                             <Checkbox2 >
-                                <Glyphicon glyph="star"/>
+                                <Glyphicon className="greatService" glyph="star"/>
                             </Checkbox2> 
                             <ControlLabel>Overall Score </ControlLabel>
                             <FormControl 

@@ -36,8 +36,7 @@ class ClientSchedule extends React.Component {
             <div className="ClientSchedule"> 
 
                 <nav className="App-header">
-                        <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>
-                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
+                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Logout </Link>
                         <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
                 </nav>          
                 <Row className="Container">
@@ -46,7 +45,7 @@ class ClientSchedule extends React.Component {
                         <ClientNav/>
                     </Col>
                     
-                    <Col sm="9">                
+                    <Col sm="9" className="sContainer">                
                         <div className="Title"> Schedule with Lambda School </div>
                     
                         <div className="Services">
@@ -68,6 +67,7 @@ class ClientSchedule extends React.Component {
                                     <Col sm="6" className="CalendarStyle">
                                         <div classname="Calendar">
                                             <InfiniteCalendar
+                                              className='iCalendar'
                                               width={500}
                                               height={300}
                                               selected={today}

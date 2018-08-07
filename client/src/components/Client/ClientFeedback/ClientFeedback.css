@@ -7,6 +7,13 @@
     margin: 2%;
 }
 
+.fContainer {
+    margin-left: -3%;
+    margin-top: -5%;
+    width: 130%;
+    
+}
+
 .ClientFeedback .Title {
     margin-right: 15%;
     font-size: 3.3rem;
@@ -20,10 +27,13 @@
     border: 5px solid #6d2e46;
     background: white;
     padding: 1.2%;
+    width: 112%;
+    height: 90%;
 }
 .ClientFeedback .FeedbackForm .FeedbackFormat {
-   padding: 4%;
-    margin-top: 3%;
+   padding: 2%;
+   margin-top: 2%;
+   
 }
 
 .StarGuide {  

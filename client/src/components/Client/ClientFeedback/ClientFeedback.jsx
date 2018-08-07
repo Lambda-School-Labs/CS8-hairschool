@@ -14,8 +14,7 @@ class ClientFeedback extends React.Component {
         return (
             <div className="ClientFeedback">
                 <nav className="App-header">
-                        <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>
-                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
+                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Logout </Link>
                         <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
                 </nav>
                 <Row className="Container">
@@ -23,7 +22,7 @@ class ClientFeedback extends React.Component {
                         <ClientNav />
                     </Col>
                     
-                    <Col sm="9" >
+                    <Col sm="9" className="fContainer" >
                         <div className="Title"> Feedback </div>
                         <Row className="FeedbackContainer">
                             <Col sm="12">

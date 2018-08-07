@@ -40,7 +40,7 @@ class AdminFeedback extends React.Component {
             .catch(error => {console.error(`Server Error: ${error}`) } );
     }
 
-    deleteSmurf(id) {
+    deleteFeedbackCard(id) {
         console.log(id)
         axios
             .delete(`http://localhost:3000/Admin/Feedback/${id}`)

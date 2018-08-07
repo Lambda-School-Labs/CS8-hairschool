@@ -26,8 +26,10 @@ class LandingPage extends React.Component {
                     <StyleRoot>
                         <Coverflow 
                             displayQuantityOfSide={1} 
-                            navigation={true}
+                            navigation={false}
                             enableHeading={false}
+                            enableScroll={true}
+                            clickable={true}
                             infiniteScroll={true} 
                             media={{
                                 '@media (max-width: 900px)': {
