@@ -1,83 +1,74 @@
 import React, {Component} from 'react';
 import {Form, FormGroup, FormControl, HelpBlock, ControlLabel} from 'react-bootstrap';
-
 class Billing2 extends Component {
     constructor(props){
         super(props);
-            this.handleChange = this.handleChange.bind(this);
-
             this.state={
-               value:''
+               cc:'', 
+               exp:'',
+               cvv:'',
             };
-        
-
+            this.handleChange = this.handleChange.bind(this);
+            this.handleSubmit = this.handleSubmit.bind(this);
         }
-
+        handleChange(key) {
+            return function (e) {
+                let state = {};
+                state[key] = e.target.value;
+                this.setState(state);
+            }.bind(this);
+        }
+        handleSubmit(event) {
+            let data = {
+                cc: this.state.cc,
+                exp: this.state.exp,
+                cvv: this.state.cvv
+            }
+            alert('thanks for your purchase');
+            event.preventDefualt();
+        }
+       
         getValidationState() {
             const length = this.state.value;
             if (length > 14 ) return 'success';
             else if (length < 0) return 'error';
             return null;
         }
-
-        
-
-       handleChange(e) {
-            this.setState({value: e.target.value});
-        }
-
     
-
+     
         // getValidationState1() {
         // const length = this.state.value.length;
         // if (length = 3) return 'success';
         // else if (length < 0) return 'error';
         // return null;
         // }
-
         
-
     render(){
         return(
-            <div className="Billform">
             
+            <form onSubmit={this.handleSubmit}>
             <Form>
-            <FormGroup
-            controlId="BillingForm"
-            // validationState={this.getValidationState()}
-            />
-
-            <FormControl
-                type="text"
-                value={this.state.value}
-                placeholder="CC#"
-                onChange={this.handleChange}
-                validationState={this.getValidationState()}
-
-            />
-
-        
-            <FormControl
-                type="text"
-                value={this.state.value}
-                placeholder="EXP"
-                onChange={this.handleChange}
-                validationState={this.getValidationState()}
-            />
-            <FormControl
-                type="text"
-                value={this.state.value}
-                placeholder="CVV"
-                onChange={this.handleChange}
-                
-            />
-
-            <HelpBlock> Thank You! </HelpBlock>
-
+            <label>
+                CC# <br/>
+            <input type="text" value={this.state.cc} onChange={this.handleChange('cc')}/>
+            </label>
+            
+            
+            <label>
+                EXP <br/>
+            <input type="text" value={this.state.exp} onChange={this.handleChange('exp')}/>
+            </label>
+            
+            
+            <label>
+                CCV <br/>
+            <input type="text" value={this.state.ccv} onChange={this.handleChange('ccv')}/>
+            </label>
             </Form>
-            </div>
+            </form>
+            
+           
         )
     }
 }
-
 export default Billing2;
