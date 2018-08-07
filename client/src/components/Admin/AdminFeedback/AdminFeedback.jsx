@@ -4,9 +4,10 @@ import './AdminFeedback.css';
 import { Link } from 'react-router-dom'
 import AdminFeedbackCard from './AdminFeedbackCard';
 import AdminNav from '../AdminNav/AdminNav';
-import { Card, CardDeck, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBody } from 'reactstrap';
+import { Card, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBody } from 'reactstrap';
 
 class AdminFeedback extends React.Component {
+
 
     
     state = {
@@ -48,7 +49,7 @@ class AdminFeedback extends React.Component {
     }
    
 
-    
+   
     render () {
         return (
             <div className="AdminFeedback">
@@ -64,6 +65,7 @@ class AdminFeedback extends React.Component {
                     <h1>Client Feedback</h1>
                     <div className="Cards">
                      <Row>
+
                         <CardDeck>
                             {this.state.feedbackCards.map((feedbackCard) => {
                                 return <AdminFeedbackCard 
