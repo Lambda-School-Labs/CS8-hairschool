@@ -1,6 +1,8 @@
 # CS8-hairschool
 
-## API URL `https://john-cs8-hairschool.herokuapp.com`
+## API URL `https://aqueous-cove-88989.herokuapp.com`
+
+## hairschool endpoints
 
 ## Logging and Authorization
 
@@ -34,8 +36,60 @@ Registers a new client.
   password2: 'Reason for failure'
 }
 ```
+### POST -- `/hairschool/rest-auth/registration/verify-email/`
+
+### POST -- `/hairschool/rest-auth/login`
+```
+// params:
+{
+  username,
+  email,     // Optional
+  password,
+}
+```
+### POST -- `/hairschool/rest-auth/logout`
+```
+// params:
+{
+  // none
+}
+```
+### POST -- `/hairschool/rest-auth/password/reset`
+```
+// params:
+{
+  email
+}
+```
+### POST -- `/hairschool/rest-auth/password/reset/confirm/`
+```
+// params:
+{
+  uid,
+  token,
+  new_password1,
+  new_password2
+}
+```
+### POST -- `/hairschool/rest-auth/password/change/`
+```
+// params:
+{
+  new_password1,
+  new_password2,
+  old_password
+}
+```
 
 
+
+// todo
+```
+### GET, PUT, PATCH -- `/hairschool/rest-auth/user/`
+
+### POST -- `/hairschool/rest-auth/rest-auth/facebook/`
+### POST -- `/hairschool/rest-auth/rest-auth/twitter/`
+```
 
 ## User Manipulation
 
@@ -75,7 +129,7 @@ Token must be set in Authorization headers as `'token a123123b321321c123123'`
 }
 ```
 
-## ```endpoint template```
+<!-- ## ```endpoint template```
 
 ### TYPE -- `/endpoint`
 
@@ -93,5 +147,5 @@ Description
 ```js
 {
 }
-```
+``` -->
 
