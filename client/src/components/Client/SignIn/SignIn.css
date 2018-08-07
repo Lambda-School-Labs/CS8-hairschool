@@ -30,3 +30,7 @@
 .account {
     margin-left: 1%;
 }
+
+.errorMessage {
+    color: red;
+}

@@ -1,10 +1,11 @@
 .ClientFeedback {
     height: 120vh;
     background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
+
 }
 
 .ClientFeedback .Container {
-    margin: 2%;
+	margin: 2%;
 }
 
 .fContainer {
@@ -15,12 +16,12 @@
 }
 
 .ClientFeedback .Title {
-    margin-right: 15%;
-    font-size: 3.3rem;
-    color: white;
-    font-family: 'Poiret One', cursive;
-    text-align: center;
-    margin-bottom: 0%;
+	margin-right: 15%;
+	font-size: 3.3rem;
+	color: white;
+	font-family: "Poiret One", cursive;
+	text-align: center;
+	margin-bottom: 0%;
 }
 
 .ClientFeedback .FeedbackContainer {
@@ -36,19 +37,18 @@
    
 }
 
-.StarGuide {  
-    margin-top: 3.3%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2.5%;
-    font-size:150%;
-    
+.StarGuide {
+	margin-top: 3.3%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2.5%;
+	font-size: 150%;
 }
 
-.StarItem {   
-    margin-right: 5%;
+.StarItem {
+	margin-right: 5%;
 }
 
 .FeedbackButton {
-    margin-left: 45%;
+	margin-left: 45%;
 }
