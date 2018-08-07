@@ -1,6 +1,7 @@
 .ClientFeedback {
-	height: 100vh;
-	background: linear-gradient(to bottom right, #6d2e46, #9a94bc);
+    height: 120vh;
+    background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
+
 }
 
 .ClientFeedback .Container {
