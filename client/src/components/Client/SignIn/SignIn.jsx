@@ -49,7 +49,7 @@ class SignIn extends React.Component {
 		if (username === "") this.setState({ showNoEmailError: true });
 		if (password === "") this.setState({ showNoPasswordError: true });
 		axios
-			.post(`${this.URL}/rest-auth/login/`, { username, password })
+			.post(`${this.URL}/hairschool/rest-auth/login/`, { username, password })
 			.then(res => {
 				localStorage.setItem("auth_token", res.data.key);
 				history.push("User/Schedule");

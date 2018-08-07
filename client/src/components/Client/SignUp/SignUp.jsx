@@ -58,7 +58,7 @@ class SignUp extends React.Component {
 		}
 		// if (password === "") this.setState({ showNoPasswordError: true });
 		axios
-			.post(`${this.URL}/rest-auth/registration/`, {
+			.post(`${this.URL}/hairschool/rest-auth/registration/`, {
 				username,
 				password1,
 				password2
