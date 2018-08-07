@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\John\\.virtualenvs\\CS8-hairschool-Tm_mdojm\\Scripts\\python.exe",
+    "python.pythonPath": "C:\\Users\\nour\\.virtualenvs\\CS8-hairschool-TCR5ziyn\\scripts\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.formatting.provider": "autopep8",
     "git.ignoreLimitWarning": true
