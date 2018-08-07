@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import FeedbackDrop from './Formdrop';
+import FormDrop1 from './Formdrop1';
+import FormDrop2 from './Formdrop2';
 import axios from 'axios';
-import {Button, ButtonGroup, Glyphicon, Row, Col, Form, FormGroup, FormControl, ControlLabel} from 'react-bootstrap'
+import Checkbox2 from './Checkbox2';
+import {Button, ButtonGroup, Glyphicon, Row, Col, Form, FormGroup, FormControl, ButtonToolbar, ToggleButtonGroup, ToggleButton, ControlLabel} from 'react-bootstrap'
 
 
 class FeedbackForm extends Component {
@@ -63,9 +65,9 @@ class FeedbackForm extends Component {
     };
 
 
-    updateStylist(event) {
+    updateStylist(data) {
         this.setState({
-            stylist: event.target.value
+            stylist: data
         });
     }
 
@@ -140,7 +142,18 @@ class FeedbackForm extends Component {
            
             <Form>
                 <div className="AppointmentInfo"> 
-                    <FeedbackDrop/>
+                    <Row>
+                        <Col sm="6">
+                            <FormDrop1 
+                                updateStylistCallback={this.updateStylist.bind(this)}
+                            />
+                        </Col>
+                        <Col sm="6">
+                            <FormDrop2
+                                updateServiceCallback={this.updateService.bind(this)}    
+                             />
+                        </Col>
+                    </Row>
                 </div>
                                
                 <Row className="StarGuide">     
@@ -151,18 +164,15 @@ class FeedbackForm extends Component {
 
                 <Row className="FeedbackForm">
                     <Col sm="6">
-                        <FormGroup className="Consultation">
-                            <ButtonGroup classname="star-rating">
-                                <Button bsSize="large" className="needsImprovement">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large" className="fairService">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large" className="greatService">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>                   
+                            <Checkbox2>
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>                                          
                             <ControlLabel> Consultation </ControlLabel>
                             <FormControl 
                                 type="text"
@@ -170,19 +180,17 @@ class FeedbackForm extends Component {
                                 value={this.state.consultationFeedback}
                                 placeholder="Consultation Feedback"          
                             /> 
-                        </FormGroup>
+                        
                         <FormGroup className="CustomerService">
-                            <ButtonGroup classname="star-rating">
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>                             
+                            <Checkbox2>
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>                               
                             <ControlLabel>Customer Serivce</ControlLabel>
                             <FormControl 
                                     type="text"
@@ -193,17 +201,15 @@ class FeedbackForm extends Component {
                         </FormGroup>
                     
                         <FormGroup className="Time">
-                            <ButtonGroup classname="star-rating">
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>
+                            <Checkbox2>
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2> 
                             <ControlLabel>On Time?</ControlLabel>
                             <FormControl 
                                 type="text"
@@ -215,17 +221,15 @@ class FeedbackForm extends Component {
                         </Col>
                         <Col sm="6">
                         <FormGroup className="Styling"> 
-                            <ButtonGroup classname="star-rating">
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>
+                            <Checkbox2>
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>  
                             <ControlLabel>Styling </ControlLabel>
                             <FormControl 
                                type="text"
@@ -236,17 +240,15 @@ class FeedbackForm extends Component {
                         </FormGroup> 
                    
                         <FormGroup className="OverallScore">
-                            <ButtonGroup classname="star-rating">
-                                <Button bsSize="large">
-                                     <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>
+                            <Checkbox2>
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2>
+                            <Checkbox2 >
+                                <Glyphicon glyph="star"/>
+                            </Checkbox2> 
                             <ControlLabel>Overall Score </ControlLabel>
                             <FormControl 
                                 type="text"

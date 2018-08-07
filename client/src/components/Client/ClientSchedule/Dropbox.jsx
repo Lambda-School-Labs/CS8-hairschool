@@ -21,7 +21,7 @@ const stylists = [
 
 
 
-class Dropboxx extends Component {
+class StylistDropbox extends Component {
     state = {
         selectedOption: null,
         isSearchable: true,
@@ -48,6 +48,6 @@ class Dropboxx extends Component {
     }
 }
 
-export default Dropboxx
+export default StylistDropbox;
 
 
