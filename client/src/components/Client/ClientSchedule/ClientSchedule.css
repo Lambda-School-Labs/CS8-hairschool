@@ -1,0 +1,102 @@
+
+.ClientSchedule{
+    height: 100%;
+    background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
+}
+
+.ClientSchedule .Container{
+    margin: 0%;
+    margin-bottom: 3.9%;
+    
+    
+}
+
+
+
+.ClientSchedule .Title {
+    margin-right: 15%;
+    font-size: 25pt;
+    color: white;
+    text-shadow: 2px #000000;
+    font-family: 'Poiret One', cursive;
+    font-stretch: expanded;
+    flex: flex;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.Services {
+    padding: 3%;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid #6d2e46;
+    padding-bottom: 5%;
+    width: 110%;
+}
+
+.button {
+    background-color: #6d2e46;
+}
+
+
+.Services .Button{
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffff;
+    border: none;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 10px;
+    
+    
+}
+
+.Services .Button:hover  {
+    background-color: #6d2e46;
+    box-shadow: 0px 7px 12px #6d2e46;
+    color: orange;
+    transform: translate(-5px);
+}
+
+.Services .Button:focus  {
+    background-color: #6d2e46;
+    box-shadow: 0px 7px 12px #6d2e46;
+    color: orange;
+    transform: translate(-5px);
+}
+
+
+
+
+.CalendarStyle {
+    padding-right: 3%;
+    padding-bottom: 3%;
+}
+
+.TimeDropbox {
+    margin-top: 9%;
+    margin-left: 15%;
+}
+
+.StylistDropbox {
+    margin-left: 15%;
+}
+
+.SubmitSchedule {
+    margin-top: 1%;
+    margin-left: 45%;
+    width: 10%;
+    height: 7%;
+    color: white;
+    background-color: #6d2e46;
+    
+}
