@@ -48,7 +48,9 @@ class LandingPage extends React.Component {
                         </Coverflow>
                     </StyleRoot>
                 </div>
-                <Button className="scheduleButton" color="purple" size="lg"><Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Schedule </Link></Button>
+                <Button className="scheduleButton" color="purple" size="lg">
+                    <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Schedule </Link>
+                </Button>
             </div>
         )
     }

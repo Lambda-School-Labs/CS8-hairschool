@@ -12,8 +12,28 @@ class AdminNav extends React.Component {
 				
 				<nav className="sidebar-nav">
 					<ul>
-						<li style={{listStyleType: "none"}}><NavLink className="navItem" to="/Admin/Schedule" style={{textDecoration: 'none'}} activeStyle={ {background: 'lightBlue' } }> Admin Schedule</NavLink> </li>
-						<li style={{listStyleType: "none"}}><NavLink className="navItem" to="/Admin/Feedback" style={{textDecoration: 'none'}} activeStyle={ {background: 'lightBlue' } }> Admin Feedback</NavLink> </li>
+						<li style={{listStyleType: "none"}}>
+						<NavLink 
+							className="navItem" 
+							to="/Admin/Schedule" 
+							style={{textDecoration: 'none'}} 
+							activeStyle={ {
+								background: '#9A94BC',
+								color:'white'
+							} }> 
+							Admin Schedule
+						</NavLink> 
+						</li>
+						
+						<li style={{listStyleType: "none"}}>
+						<NavLink 
+							className="navItem" 
+							to="/Admin/Feedback" 
+							style={{textDecoration: 'none'}} 
+							activeStyle={ {background: '#9A94BC'} }> 
+							Admin Feedback
+						</NavLink> 
+						</li>
 					</ul>
 				</nav>
 				 

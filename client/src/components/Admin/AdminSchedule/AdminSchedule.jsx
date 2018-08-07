@@ -1,5 +1,6 @@
 import React from 'react';
 import './AdminSchedule.css';
+import { Link } from 'react-router-dom'
 import AdminNav from '../AdminNav/AdminNav';
 import Calendar from 'react-calendar';
 import FullCalendar from 'fullcalendar-reactwrapper';
@@ -62,8 +63,12 @@ class AdminSchedule extends React.Component {
         render () {
         return (
             <div className="AdminSchedule">
+            <nav className="App-header">
+                        <Link className="link signup" to="/" style={{textDecoration: 'none'}}> Home </Link>
+                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Logout </Link>
+            </nav>
                     <Row>
-                        <Col sm="3">
+                        <Col sm="2">
                             <AdminNav/>
                         </Col>
                         <Col sm="7">
