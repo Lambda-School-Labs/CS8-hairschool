@@ -6,6 +6,7 @@ import {Button,Row, Col, Grid, Jumbotron, PanelTitle} from 'react-bootstrap';
 import './ClientSchedule.css';
 import Dropboxx from './Dropbox'; 
 import Calendar from './Calendar';
+import GetOneUser from "../johntest"
 
 class ClientSchedule extends React.Component {
     constructor(props){
@@ -14,17 +15,19 @@ class ClientSchedule extends React.Component {
             date: new Date (),
             
         }
-       
-    
     }
 
+    
     onChange = date => this.setState({date})
+
     
    
     render () {
         return (
         
             <div className="ClientSchedule"> 
+
+                    <GetOneUser />
 
                 <nav className="App-header">
                         <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>

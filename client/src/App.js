@@ -13,6 +13,7 @@ import Settings from './components/Client/Settings/Settings';
 
 import AdminSchedule from './components/Admin/AdminSchedule/AdminSchedule';
 import AdminFeedback from './components/Admin/AdminFeedback/AdminFeedback';
+import getOneUser from './components/Client/johntest';
 
 
 class App extends Component {

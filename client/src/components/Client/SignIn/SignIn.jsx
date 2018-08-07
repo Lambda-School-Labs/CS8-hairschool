@@ -76,7 +76,7 @@ class SignIn extends React.Component {
 					<FormGroup>
 						<Label for="Password">Password: </Label>
 						<Input
-							type="text"
+							type="password"
 							name="password"
 							onChange={this.handleInputChange}
 						/>
