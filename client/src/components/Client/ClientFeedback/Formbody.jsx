@@ -117,7 +117,9 @@ class FeedbackForm extends Component {
         })
     }
     
-    
+    myClick = () =>  {
+        alert("Feedback Sent!");
+    }
 
     render(){
 
@@ -143,13 +145,13 @@ class FeedbackForm extends Component {
                 <Row className="StarGuide">     
                     <Col sm="3">
                         <Row>
-                        <div>Poor Service = </div> <div className="StarItem"><Glyphicon  glyph="star"/></div> 
+                        <div>Poor = </div> <div className="StarItem"><Glyphicon  glyph="star"/></div> 
                        </Row>
                     </Col>
                      
                     <Col sm="4">
                         <Row>
-                        <div>Great Service =</div><div className="StarItem"><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/></div> 
+                        <div>Excellent =</div><div className="StarItem"><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/></div> 
                        </Row>
                     </Col>
                 </Row>
@@ -159,11 +161,12 @@ class FeedbackForm extends Component {
                         <Row>
 
                         <Col sm="6"> 
-                        <FormGroup className="Labels">                                                     
+                        <FormGroup className="Labels">         
+                            <ControlLabel className="Label sstyling"> Styling: </ControlLabel>                                             
                             <ControlLabel className="Label consult"> Consultation: </ControlLabel>
-                            <ControlLabel className="Label cservice">Serivce: </ControlLabel>
+                            <ControlLabel className="Label cservice">Customer Serivce: </ControlLabel>
                             <ControlLabel className="Label time">Punctuality: </ControlLabel>
-                            <ControlLabel className="Label sstyling">Styling: </ControlLabel>                       
+                                                  
                         </FormGroup>
                         </Col>
 
@@ -194,7 +197,7 @@ class FeedbackForm extends Component {
                         </FormGroup> 
                         </Col>
 
-                        <button className="FeedbackButton"> Submit </button>         
+                        <button className="FeedbackButton" onClick={this.myClick}> Submit </button>         
                 </Row>
                 </Panel>
             </Form>

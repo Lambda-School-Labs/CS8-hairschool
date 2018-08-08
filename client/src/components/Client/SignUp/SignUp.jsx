@@ -8,7 +8,7 @@ import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
 class SignUp extends React.Component {
     constructor(props) {
         super(props);
-        this.login = { email: "", password1: "" };
+        this.login = { firstname: "", email: "", password1: "" };
         this.URL = "https://john-cs8-hairschool.herokuapp.com";
         this.state = {
             showNoEmailError: false,
@@ -48,13 +48,14 @@ class SignUp extends React.Component {
         );
     }
     buttonHandler(login, history) {
-        const { username, password1, password2 } = login;
+        const {firstname, username, password1, password2 } = login;
         if (/^.+@.+\..+$/.test(username) === false) {
             this.setState({ showNoEmailError: true });
         }
         // if (password === "") this.setState({ showNoPasswordError: true });
         axios
             .post(`${this.URL}/hairschool/rest-auth/registration/`, {
+                firstname,
                 username,
                 password1,
                 password2
@@ -74,6 +75,14 @@ class SignUp extends React.Component {
                 <div className="container">
                     <div className="SignUpTitle">Sign Up</div>
                     <Form className="SignUpForm">
+                    <FormGroup>
+                            <Label for="FirstName">First Name: </Label>
+                            <Input
+                                type="text"
+                                name="firstname"
+                                onChange={this.handleInputChange}
+                            />
+                        </FormGroup>
                         <FormGroup>
                             <Label for="Email">Email: </Label>
                             <Input

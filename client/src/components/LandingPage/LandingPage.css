@@ -14,7 +14,8 @@
     margin-bottom: 1%;
     margin-top: 0%;
 	padding: 1%;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	margin-right: 2%;
   }
   
 .purple {
@@ -70,7 +71,7 @@ lContainer {
 }
 
 .scheduleButton {
-	margin-top: 1%;
+	margin-top: 2%;
     margin-left: 45%;
 	width: 10%;
 	height: 7%;
