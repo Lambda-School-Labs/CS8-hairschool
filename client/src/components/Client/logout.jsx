@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
-import "./SignIn.css";
+import "./Sig.css";
 import { Link } from "react-router-dom";
-import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
+
 
 
 
@@ -78,7 +78,7 @@ class SignIn extends React.Component {
 					<FormGroup>
 						<Label for="Password">Password: </Label>
 						<Input
-							type="password"
+							type="text"
 							name="password"
 							onChange={this.handleInputChange}
 						/>

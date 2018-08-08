@@ -4,7 +4,7 @@
 
 .LandingPage {
     height: 100vh;
-    background: linear-gradient(to bottom right, #6d2e46, #9A94BC);
+	background: linear-gradient(to bottom right, white, #6d2e46);
 }
 
 .App-header {
@@ -17,12 +17,30 @@
 	font-size: 1.2rem;
   }
   
-.link {
-    color: white;
-	padding: 1%;
+.purple {
+    color: #5c2c3f;
+	padding: .5%;
 	
     
 }  
+.purple:hover {
+	color: orange;
+}
+
+.white {
+    color: white;
+	padding: .5%;
+	
+    
+}  
+.white:hover {
+	color: orange;
+}
+
+.link {
+	color: white;
+	padding: .5%;
+}
 
 .link:hover {
 	color: orange;
@@ -31,12 +49,21 @@
 .LandingTitle {
 	text-align: center;
 	color: rgb(255, 255, 255, .5);
+	margin-top: -2%;
 	margin-bottom: .5%;
+	margin-left: -4%;
 	font-size: 6rem;
 	font-weight: 200;
 	font-family: 'Poiret One', cursive;
 }
 
+.carousel {
+	margin-top: -.8%;
+}
+
+lContainer {
+	padding-top: 20%;
+}
 
 .text {
     text-align: center;
@@ -49,4 +76,5 @@
 	height: 7%;
 	color: white;
 	background-color: #6d2e46;
+	margin-bottom: 3%;
 }

@@ -36,12 +36,6 @@ class Billing2 extends Component {
         }
     
      
-        // getValidationState1() {
-        // const length = this.state.value.length;
-        // if (length = 3) return 'success';
-        // else if (length < 0) return 'error';
-        // return null;
-        // }
         
     render(){
         return(

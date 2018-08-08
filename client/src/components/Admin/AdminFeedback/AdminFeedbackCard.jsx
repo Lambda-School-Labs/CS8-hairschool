@@ -3,12 +3,14 @@ import { Card, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBody }
 
 const AdminFeedbackCard = (props) => {
 
+    const rating = ["bad", "fair", "great"]
+
     return (
         <Card>
             <CardHeader>Stylist:{props.stylist}</CardHeader>
             <CardBody>
                 <CardTitle>Services:{props.services}</CardTitle>
-                <CardText>Consultation Rating:{props.consultaionRating}</CardText>
+                <CardText>Consultation Rating:{rating[props.consultaionRating]}</CardText>
                 <CardText>Consultation Feedback:{props.consultaitionFeedback}</CardText>
                 <CardText>Customer Service Rating:{props.customerServiceRating}</CardText>
                 <CardText>Customer Service Feedback:{props.customerServiceFeedback}</CardText>

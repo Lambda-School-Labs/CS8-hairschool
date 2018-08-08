@@ -4,7 +4,7 @@ import './AdminFeedback.css';
 import { Link } from 'react-router-dom'
 import AdminFeedbackCard from './AdminFeedbackCard';
 import AdminNav from '../AdminNav/AdminNav';
-import { Card, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBody } from 'reactstrap';
+import { Card, CardTitle, CardText, Row, Col, CardDeck, CardHeader, CardFooter, CardBody } from 'reactstrap';
 
 class AdminFeedback extends React.Component {
 
@@ -35,16 +35,16 @@ class AdminFeedback extends React.Component {
 
     getFeedbackCards() {
         axios
-            .get('http://localhost:3000/Admin/Feedback')
+            .get('https://john-cs8-hairschool.herokuapp.com/hairschool/user/feedbacks')
             .then(response => response.data)
             .then( feedbackCards => { this.setState({feedbackCards}) } )
             .catch(error => {console.error(`Server Error: ${error}`) } );
     }
 
-    deleteSmurf(id) {
+    deleteFeedbackCard(id) {
         console.log(id)
         axios
-            .delete(`http://localhost:3000/Admin/Feedback/${id}`)
+            .delete(`https://john-cs8-hairschool.herokuapp.com/hairschool/user/feedbacks/${id}`)
             .then( () => { this.getFeedbackCard(); } );
     }
    
