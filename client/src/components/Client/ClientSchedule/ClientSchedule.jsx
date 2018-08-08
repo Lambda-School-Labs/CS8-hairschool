@@ -9,6 +9,7 @@ import StylistDropbox from './Dropbox';
 import TimeDropbox from './Dropbox2';
 import InfiniteCalendar from 'react-infinite-calendar';
 import Checkbox from './Checkbox';
+import GetUser from './getUser';
 
 
 let today = new Date();
@@ -38,7 +39,8 @@ class ClientSchedule extends React.Component {
                 <nav className="App-header">
                         <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Logout </Link>
                         <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
-                </nav>          
+                </nav>        
+                <GetUser />
                 <Row className="Container">
                 
                     <Col sm="2"  >

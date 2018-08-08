@@ -36,6 +36,12 @@
  margin-bottom: 25%;
 }
 
+.ui-checkbox-btn.is-unchecked:hover {
+ background-color: #6d2e46;
+ color: white;
+ fill: white;
+}
+
 .ui-checkbox-btn.is-checked {
  box-shadow: 0px 4px 10px #63263e;
  background-color: #6d2e46;

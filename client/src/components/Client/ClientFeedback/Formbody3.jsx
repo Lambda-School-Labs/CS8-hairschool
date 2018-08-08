@@ -141,44 +141,59 @@ class FeedbackForm extends Component {
                 </div>
                                
                 <Row className="StarGuide">     
-                    <Col sm="3">
-                        <Row>
-                        <div>Poor Service = </div> <div className="StarItem"><Glyphicon  glyph="star"/></div> 
-                       </Row>
-                    </Col>
+                    <div>
+                        <div className="StarItem">
+                            <div className="StarColor">
+                                <Glyphicon  glyph="star"/>
+                            </div>
+                        </div> 
+                       = Poor Service
+                    </div>
                      
-                    <Col sm="4">
-                        <Row>
-                        <div>Great Service =</div><div className="StarItem"><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/></div> 
-                       </Row>
-                    </Col>
+                    <div>
+                        <div className="StarItem">
+                            <div className="StarColor">
+                                <Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/>
+                            </div>
+                        </div> 
+                       = Great Service
+                    </div>
                 </Row>
                 <Panel className="PanelSize">
                 <Row className="FeedbackForm">
                     <Col sm="6" className="FormStars">
-                        <Row>
 
-                        <Col sm="6"> 
-                        <FormGroup className="Labels">                                                     
+                        <FormGroup className="Consultation">
+
+                            <Row>                               
                             <ControlLabel className="Label consult"> Consultation: </ControlLabel>
-                            <ControlLabel className="Label cservice">Serivce: </ControlLabel>
-                            <ControlLabel className="Label time">Punctuality: </ControlLabel>
-                            <ControlLabel className="Label sstyling">Styling: </ControlLabel>                       
+                            
+                            <Stars/>
+                            
+                            </Row>
+
                         </FormGroup>
-                        </Col>
 
-                        <Col sm="6">
-                        <FormGroup className="Stars">                                          
-                            <Stars/>
-                            <Stars/>
-                            <Stars/>
-                            <Stars/>
-                                                       
+                        <FormGroup className="CustomerService">
+                            <Row>                           
+                            <ControlLabel className="Label cservice">Customer Serivce: </ControlLabel>
+                            <Stars/> 
+                            </Row>
                         </FormGroup>
-                        </Col>
-
-                        </Row>
-
+                    
+                        <FormGroup className="Time">
+                            <Row>
+                            <ControlLabel className="Label time">On Time?: </ControlLabel>
+                            <Stars/>
+                            </Row>
+                        </FormGroup>
+                        
+                        <FormGroup className="Styling"> 
+                            <Row>
+                            <ControlLabel className="Label sstyling">Styling: </ControlLabel>
+                            <Stars/> 
+                            </Row>
+                        </FormGroup> 
                    </Col>
                    <Col sm="6">
                         <FormGroup className="OverallScore">
