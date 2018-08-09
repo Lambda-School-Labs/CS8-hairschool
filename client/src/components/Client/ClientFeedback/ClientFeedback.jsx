@@ -15,7 +15,7 @@ class ClientFeedback extends React.Component {
             <div className="ClientFeedback">
                 <nav className="App-header">
                         <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Logout </Link>
-                        <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
+                        <Link className="link DAsignin" to="/Admin/Feedback" style={{textDecoration: 'none'}}> Demo Admin </Link>
                 </nav>
                 <Row className="Container">
                     <Col sm="2">

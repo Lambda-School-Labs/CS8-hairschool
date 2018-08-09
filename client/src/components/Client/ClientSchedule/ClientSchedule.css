@@ -11,9 +11,24 @@
     
 }
 
+.GetUser {
+    color: rgb(255, 255, 255, 0.3);
+    padding-bottom: -4%;
+    padding-top: 2%;
+    font-size: 3rem;
+    margin-left: 8%;
+    
+}
+
+.cNav {
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+}
+
+
 .sContainer {
     margin-left: -3%;
-    margin-top: -4%;
+    margin-top: -5%;
 }
 
 
@@ -113,4 +128,12 @@
     color: white;
     background-color: #6d2e46;
     
+}
+
+.modal-container {
+    position: relative;
+}
+
+.modal-container .modal, .modal-container .modal-backdrop {
+    position: absolute;
 }

@@ -17,12 +17,12 @@ class GetUser extends React.Component {
     }
 
     componentDidMount() {
-        const token = "token" + localStorage.getItem("auth_token");
+        const token = "token " + localStorage.getItem("auth_token");
         axios.defaults.headers.common["Authorization"] = token;
         axios   
           .get(`${this.URL}/hairschool/rest-auth/user/`)
           .then(res => {
-              this.setState({user: {username:res.data.username}});
+              this.setState({user: {firstname:res.data.firstname}});
               console.log(this.state.user)
           })
           .catch(err => {
@@ -31,9 +31,9 @@ class GetUser extends React.Component {
     }
 render() {
     return (
-        <div classname="getOneUser"> Welcome, {this.state.user.username}</div>
+        <div classname="GetUser"> Welcome, {this.state.user.firstname} SaaSha! </div>
     );
 }
 }
 
-export default GetUser
+export default GetUser;
