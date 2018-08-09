@@ -4,7 +4,7 @@ import './AdminFeedback.css';
 import { Link } from 'react-router-dom'
 import AdminFeedbackCard from './AdminFeedbackCard';
 import AdminNav from '../AdminNav/AdminNav';
-import { Card, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBody } from 'reactstrap';
+import { Card, CardDeck, CardTitle, CardText, Row, Col, CardHeader, CardFooter, CardBody } from 'reactstrap';
 
 class AdminFeedback extends React.Component {
 

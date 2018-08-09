@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hairschool/', include('hairschool.urls')),
     path("stripe/", include("djstripe.urls", namespace="djstripe")), 
+
+    path('stripepayments/', include('stripepayments.urls')),
 ]

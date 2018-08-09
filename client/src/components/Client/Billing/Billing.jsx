@@ -33,7 +33,6 @@ class Billing extends Component {
                             </Panel.Body>
                         </Panel>
                         </div>
-                        <button className="BuyNowButton">Buy Now</button>
                     </Col>
                 </Row>               
             </div>
