@@ -68,6 +68,10 @@ class SignUp extends React.Component {
                 console.log("error", err);
             });
     }
+
+    myClick = () =>  {
+        alert("Success! You're signed up!");
+    }
     render() {
         console.log(this.login);
         return (
@@ -112,12 +116,13 @@ class SignUp extends React.Component {
                             ? this.showNoPasswordError()
                             : false}
                         <Button
-                            onClick={() => this.buttonHandler(this.login, this.props.history)}
+                            onClick={this.myClick}
+                            //onClick={() => this.buttonHandler(this.login, this.props.history)}
                             className="button"
                             color="purple"
                             size="lg"
                         >
-                            Sign Up
+                            <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign Up </Link>
                         </Button>
                         <div>
                             Have an account?<Link
