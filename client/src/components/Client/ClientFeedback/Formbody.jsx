@@ -1,164 +1,205 @@
 import React, {Component} from 'react';
-import {Button, ButtonGroup, Glyphicon, Panel, Row, Form, FormGroup, FormControl, HelpBlock, ControlLabel} from 'react-bootstrap'
+import FormDrop1 from './Formdrop1';
+import FormDrop2 from './Formdrop2';
+import axios from 'axios';
+import Stars from './Stars';
+import {Button, ButtonGroup, Glyphicon, Row, Col, Form, FormGroup, Panel, FormControl, ButtonToolbar, ToggleButtonGroup, ToggleButton, ControlLabel} from 'react-bootstrap'
 
 
 class FeedbackForm extends Component {
-    constructor(props){
-        super(props);
-
-        this.handleChange = this.handleChange.bind(this);
-    
+    constructor(props) {
+        super (props);
         this.state = {
+            stylist:"",
+            service:"",
+
+            consultationRating:"",
+            consultationFeedback:"",
+            customerServiceRating:"",
+            customerServiceFeedback:"",
+            timeRating:"",
+            timeFeedback:"",
+            stylingRating:"",
+            stylingFeedback:"",
+            overallRating:"",
+            overallFeedback:""
+        }
+
+        this.addFeedbackCard = this.addFeedbackCard.bind(this);
+        this.updateStylist = this.updateStylist.bind(this);
+        this.updateService = this.updateService.bind(this);
+        this.updateConsultationRating = this.updateConsultationRating.bind(this);
+        
+        this.updateCustomerServiceRating = this.updateCustomerServiceRating.bind(this);
+        
+        this.updateTimeRating = this.updateTimeRating.bind(this);
+        
+        this.updateStylingRating = this.updateStylingRating.bind(this);
+       
+        this.updateOverallRating = this.updateOverallRating.bind(this);
+        this.updateOverallFeedback = this.updateOverallFeedback.bind(this);
+    };
+
+    addFeedbackCard = (event) => {
+        event.preventDefault();
+        //add code to create the feedback card using the api
+        axios
+            .post('http://localhost:3000/Admin/Feedback', this.state)
+    
+
+        this.setState({
+            stylist:"",
+            service:"",
             
-            value:'',
+            consultationRating:"",
+            
+            customerServiceRating:"",
+            
+            timeRating:"",
+           
+            stylingRating:"",
+            
+            overallRating:"",
+            overallFeedback:""            
+        });
+    };
 
-        };
 
+    updateStylist(data) {
+        this.setState({
+            stylist: data
+        });
     }
 
+    updateService(event) {
+        this.setState({
+            service: event.target.value
+        })
+    }
 
-        getValidationState() {
-            const length = this.state.value.length;
-            if (length > 3) return 'success';
-            else if (length < 0) return 'error';
-            return null;
-        }
-      
-        handleChange(e) {
-            this.setState({value: e.target.value});
-        }
+    //Consultation rating & feedback
+    updateConsultationRating(event) {
+        this.setState({
+            consultationRating: event.target.value
+        })
+    }
     
+    //Customer Service rating & feedback
+    updateCustomerServiceRating(event) {
+        this.setState({
+            customerServiceRating: event.target.value
+        })
+    }
+   
+    //Time rating & feedback
+    updateTimeRating(event) {
+        this.setState({
+            timeRating: event.target.value
+        })
+    }
+    
+    //Styling rating & feedback
+    updateStylingRating(event) {
+        this.setState({
+            stylingRating: event.target.value
+        })
+    }
+    
+    //Overall rating & feedback
+    updateOverallRating(event) {
+        this.setState({
+            overallRating: event.target.value
+        })
+    }
+    updateOverallFeedback(event) {
+        this.setState({
+            overallFeedback: event.target.value
+        })
+    }
+    
+    myClick = () =>  {
+        alert("Feedback Sent!");
+    }
 
     render(){
-
-        // function FieldGroup({id, label, help, ...props}) {
-        //     return (
-        //         <FormGroup controlId={id}>
-        //             <ControlLabel>{label}</ControlLabel>
-        //             <FormControl {...props}/>
-        //         </FormGroup>
-        //     )
-        // }
 
         return(
             <div className="Formheader">
            
             <Form>
-                
-                <Row>
-                    <FormGroup
-                        controlId="FeedBackForm"
-                        validationState={this.getValidationState()}>
-                        <ButtonGroup classname="star-rating">
-                            <Button bsSize="large">
-                                <Glyphicon glyph="star"/>
-                            </Button>
-                            <Button bsSize="large">
-                                <Glyphicon glyph="star"/>
-                            </Button>
-                            <Button bsSize="large">
-                                <Glyphicon glyph="star"/>
-                             </Button>
-                        </ButtonGroup>
-                    
-                            <ControlLabel>Consultation </ControlLabel>
-                                <FormControl 
-                                    type="text"
-                                    value={this.state.value}
-                                    placeholder="Notes"
-                                    onChange={this.handleChange}
-                                /> 
-                    
-                           
-                        <ButtonGroup classname="star-rating">
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>         
+                <div className="AppointmentInfo"> 
+                    <Row>
+                        <Col sm="6">
+                            <FormDrop1 
+                                updateStylistCallback={this.updateStylist.bind(this)}
+                            />
+                        </Col>
+                        <Col sm="6">
+                            <FormDrop2
+                                updateServiceCallback={this.updateService.bind(this)}    
+                             />
+                        </Col>
+                    </Row>
+                </div>
+                               
+                <Row className="StarGuide">     
+                    <Col sm="3">
+                        <Row>
+                        <div>Poor = </div> <div className="StarItem"><Glyphicon  glyph="star"/></div> 
+                       </Row>
+                    </Col>
                      
-                                <ControlLabel>Customer Serivce </ControlLabel>
-                                    <FormControl 
-                                        type="text"
-                                        value={this.state.value}
-                                        placeholder="Notes"
-                                        onChange={this.handleChange}
-                                /> 
-
-                    <ButtonGroup classname="star-rating">
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                                <Button bsSize="large">
-                                    <Glyphicon glyph="star"/>
-                                </Button>
-                            </ButtonGroup>
-                        
-
-                            <ControlLabel>On Time? </ControlLabel>
-                                <FormControl 
-                                    type="text"
-                                    value={this.state.value}
-                                    placeholder="Notes"
-                                    onChange={this.handleChange}
-                                /> 
-
-                    <ButtonGroup classname="star-rating">
-                        <Button bsSize="large">
-                            <Glyphicon glyph="star"/>
-                        </Button>
-                        <Button bsSize="large">
-                            <Glyphicon glyph="star"/>
-                        </Button>
-                        <Button bsSize="large">
-                            <Glyphicon glyph="star"/>
-                        </Button>
-                    </ButtonGroup>
-        
-
-
-                     <ControlLabel>Styling </ControlLabel>
-                         <FormControl 
-                            type="text"
-                            value={this.state.value}
-                            placeholder="Notes"
-                            onChange={this.handleChange}
-                         /> 
-
-                         <ButtonGroup classname="star-rating">
-                         <Button bsSize="large">
-                             <Glyphicon glyph="star"/>
-                         </Button>
-                         <Button bsSize="large">
-                             <Glyphicon glyph="star"/>
-                         </Button>
-                         <Button bsSize="large">
-                             <Glyphicon glyph="star"/>
-                         </Button>
-                     </ButtonGroup>
-
-
-                    <ControlLabel>Overall Score </ControlLabel>
-                        <FormControl 
-                            type="text"
-                            value={this.state.value}
-                            placeholder="Notes"
-                            onChange={this.handleChange}
-                        /> 
-
-                            <FormControl.Feedback/>
-                                <HelpBlock> Thanks for your Feedback! </HelpBlock>
-                </FormGroup>
+                    <Col sm="4">
+                        <Row>
+                        <div>Excellent =</div><div className="StarItem"><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/></div> 
+                       </Row>
+                    </Col>
                 </Row>
-                
+                <Panel className="PanelSize">
+                <Row className="FeedbackForm">
+                    <Col sm="6" className="FormStars">
+                        <Row>
+
+                        <Col sm="6"> 
+                        <FormGroup className="Labels">         
+                            <ControlLabel className="Label sstyling"> Styling: </ControlLabel>                                             
+                            <ControlLabel className="Label consult"> Consultation: </ControlLabel>
+                            <ControlLabel className="Label cservice">Customer Serivce: </ControlLabel>
+                            <ControlLabel className="Label time">Punctuality: </ControlLabel>
+                                                  
+                        </FormGroup>
+                        </Col>
+
+                        <Col sm="6">
+                        <FormGroup className="Stars">                                          
+                            <Stars/>
+                            <Stars/>
+                            <Stars/>
+                            <Stars/>
+                                                       
+                        </FormGroup>
+                        </Col>
+
+                        </Row>
+
+                   </Col>
+                   <Col sm="6">
+                        <FormGroup className="OverallScore">
+                            
+                            <ControlLabel className="Label">Overall Score </ControlLabel>
+                            <Stars/> 
+                            <FormControl 
+                                componentClass="textarea"
+                                onChange={this.updateOverallFeedback}
+                                value={this.state.overallFeedback}
+                                placeholder="Overall Feedback"                               
+                            />
+                        </FormGroup> 
+                        </Col>
+
+                        <button className="FeedbackButton" onClick={this.myClick}> Submit </button>         
+                </Row>
+                </Panel>
             </Form>
             </div>
         )

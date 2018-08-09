@@ -1,11 +1,19 @@
 .AdminSchedule {
-    top: 0px;
+    padding-right: 4%;
+    padding-bottom: 5%;
 }
 .ScheduleHeader {
-    color: blue;
+    color: rgb(255, 255, 255, 0.5);
     
 }
 
 .AdminCalendar {
-    margin-top: 2%;
+    margin-top: 0%;
+    background-color: white;
+    padding: 3%;
+}
+
+.todayA {
+    margin-bottom: 8%;
+    
 }

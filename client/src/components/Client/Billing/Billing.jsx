@@ -13,8 +13,7 @@ class Billing extends Component {
             <div className="Billing">
 
                 <nav className="App-header">
-                        <Link className="link signup" to="/SignUp" style={{textDecoration: 'none'}}> Sign Up </Link>
-                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign In </Link>
+                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Logout </Link>
                         <Link className="link DAsignin" to="/Admin/Schedule" style={{textDecoration: 'none'}}> Demo Admin </Link>
                 </nav> 
                 <Row className="Container">
