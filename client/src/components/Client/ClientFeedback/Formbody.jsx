@@ -151,7 +151,7 @@ class FeedbackForm extends Component {
                      
                     <Col sm="4">
                         <Row>
-                        <div>Excellent =</div><div className="StarItem"><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/></div> 
+                        <div>Excellent =</div><div className="StarItem"><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/><Glyphicon  glyph="star"/></div> 
                        </Row>
                     </Col>
                 </Row>
