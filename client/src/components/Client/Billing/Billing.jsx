@@ -8,6 +8,7 @@ import Billing2 from './Billingform';
 
 class Billing extends Component {
 
+
     render () {
         return (
             <div className="Billing">
@@ -32,7 +33,7 @@ class Billing extends Component {
                             </Panel.Body>
                         </Panel>
                         </div>
-                        <button className="BuyNowButton">Buy Now</button>
+                        
                     </Col>
                 </Row>               
             </div>
