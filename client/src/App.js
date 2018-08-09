@@ -10,10 +10,11 @@ import ClientSchedule from './components/Client/ClientSchedule/ClientSchedule';
 import ClientFeedback from './components/Client/ClientFeedback/ClientFeedback';
 import Billing from './components/Client/Billing/Billing';
 import Settings from './components/Client/Settings/Settings';
-import CheckoutContainer from './components/Client/Billing/CheckoutContainer';
+
 
 import AdminSchedule from './components/Admin/AdminSchedule/AdminSchedule';
 import AdminFeedback from './components/Admin/AdminFeedback/AdminFeedback';
+import CheckoutContainer from './components/Client/Billing/CheckoutContainer';
 
 
 class App extends Component {
@@ -31,7 +32,7 @@ class App extends Component {
           <Route path="/User/Schedule" component={ClientSchedule}/>
           <Route path="/User/Feedback" component={ClientFeedback}/>
           <Route path="/User/Billing" component={Billing}/>
-          <Route path="/devbilling" component={CheckoutContainer} />
+          <Route path="/user/devbilling" component={CheckoutContainer} />
           <Route path="/User/Settings" component={Settings}/>
          
           <Route path="/Admin/Schedule" component={AdminSchedule}/>
