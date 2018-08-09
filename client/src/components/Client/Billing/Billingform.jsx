@@ -4,6 +4,10 @@ import {HelpBlock} from 'react-bootstrap';
 
 class Billing2 extends Component{
      
+
+myClick = () =>  {
+    alert("Thank You for Your Payment!");
+}
 render(){
     return(
         <div>
@@ -270,7 +274,7 @@ render(){
             </FormGroup>
             <Row><Col sm="12">
             <center><HelpBlock>Thank you for your purcahse!</HelpBlock></center>
-            <center><Button>Buy Now</Button></center>
+            <center><Button onClick={this.myClick}>Buy Now</Button></center>
             </Col>
             </Row>
          </Col>
