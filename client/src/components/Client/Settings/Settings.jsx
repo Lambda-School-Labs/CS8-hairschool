@@ -2,6 +2,8 @@ import React from 'react';
 import './Settings.css';
 import ClientNav from '../ClientNav/ClientNav';
 import { Link } from 'react-router-dom';
+import SettingDrop1 from './SettingDrop1';
+import SettingDrop2 from './SettingDrop2';
 import { Button, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
 
 class Settings extends React.Component {
@@ -50,24 +52,10 @@ class Settings extends React.Component {
                                 <Form>
                                     <FormGroup className="FormRight">
                                         <FormGroup>
-                                            <Label for="selectingStylists">Stylists: </Label>
-                                            <Input type="select" name="stylists" > 
-                                                <option> Stylist 1</option>
-                                                <option> Stylist 2</option>
-                                                <option> Stylist 3</option>
-                                                <option> Stylist 4</option>
-                                                <option> Stylist 5</option>
-                                            </Input>
+                                            <SettingDrop1 />
                                         </FormGroup>
                                         <FormGroup>
-                                            <Label for="selectingStylists">Add Services: </Label>
-                                            <Input type="select" name="stylists" > 
-                                                <option> Service 1</option>
-                                                <option> Service 2</option>
-                                                <option> Service 3</option>
-                                                <option> Service 4</option>
-                                                <option> Service 5</option>
-                                            </Input>
+                                            <SettingDrop2 />
                                         </FormGroup>
                                     </FormGroup>
                                 </Form>
