@@ -4,15 +4,19 @@ import "./SignIn.css";
 import { Link } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
 
+
+
 class SignIn extends React.Component {
 	//holds data as user types it
 	constructor(props) {
 		super(props);
-		this.login = { email: "", password: "" };
+		this.login = { username: "", password: "" };
 		this.URL = "https://john-cs8-hairschool.herokuapp.com";
 		this.state = {
-			showNoEmailError: false,
-			showNoPasswordError: false
+			showNoUsernameError: false,
+			showNoPasswordError: false,
+			serverError: false
+
 		};
 	}
 
@@ -25,17 +29,19 @@ class SignIn extends React.Component {
 	};
 
 	clearAllErrors() {
-		this.setState({ showNoEmailError: false, showNoPasswordError: false });
+		setTimeout(() => this.setState({ showNoEmailError: false, showNoPasswordError: false, serverError: false }), 2500);
 	}
 
 	//error messages
-	showNoEmailError() {
+	showNoUsernameError() {
+		this.clearAllErrors();
 		return (
-			<div className="errorMessage"> Sorry! Please enter your email! </div>
+			<div className="errorMessage"> Sorry! Please enter your Username! </div>
 		);
 	}
 
 	showNoPasswordError() {
+		this.clearAllErrors();
 		return (
 			<div className="errorMessage">
 				{" "}
@@ -44,18 +50,31 @@ class SignIn extends React.Component {
 		);
 	}
 
+	serverError() {
+		this.clearAllErrors();
+		return (
+			<div className="errorMessage">
+				{" "}
+				There was an error logging you in!{" "}
+			</div>
+		);
+	}
+
 	buttonHandler(login, history) {
 		const { username, password } = login;
-		if (username === "") this.setState({ showNoEmailError: true });
+		if (username === "") this.setState({ showNoUsernameError: true });
 		if (password === "") this.setState({ showNoPasswordError: true });
+
 		axios
-			.post(`${this.URL}/rest-auth/login/`, { username, password })
+			.post(`${this.URL}/hairschool/rest-auth/login/`, { username, password })
 			.then(res => {
 				localStorage.setItem("auth_token", res.data.key);
 				history.push("User/Schedule");
 			})
 			.catch(err => {
 				console.log("error", err);
+				this.setState({ serverError: true});
+				
 			});
 	}
 
@@ -66,7 +85,7 @@ class SignIn extends React.Component {
 
 				<Form className="SignInForm">
 					<FormGroup>
-						<Label for="Username">Email: </Label>
+						<Label for="Username">Username: </Label>
 						<Input
 							type="text"
 							name="username"
@@ -76,13 +95,14 @@ class SignIn extends React.Component {
 					<FormGroup>
 						<Label for="Password">Password: </Label>
 						<Input
-							type="text"
+							type="password"
 							name="password"
 							onChange={this.handleInputChange}
 						/>
 					</FormGroup>
-					{this.state.showNoEmailError ? this.showNoEmailError() : false}
+					{this.state.showNoUsernameError ? this.showNoUsernameError() : false}
 					{this.state.showNoPasswordError ? this.showNoPasswordError() : false}
+					{this.state.serverError ? this.serverError() : false}
 					<Button
 						onClick={() => this.buttonHandler(this.login, this.props.history)}
 						type="button"

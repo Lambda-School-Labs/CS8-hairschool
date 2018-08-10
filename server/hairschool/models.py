@@ -37,8 +37,8 @@ class Stylist(models.Model):
 class User_Feedback(models.Model):
     Stylist = models.CharField(max_length=30)
     Service = models.CharField(max_length=30)
-    Date = models.DateTimeField(auto_now_add=True)
-    Time = models.DateTimeField()
+    # Date = models.DateTimeField(auto_now_add=True)
+    # Time = models.DateTimeField()
     STARS = ((1, 'one'),
              (2, 'two'),
              (3, 'three'),)
