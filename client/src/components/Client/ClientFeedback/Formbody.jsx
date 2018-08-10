@@ -13,29 +13,25 @@ class FeedbackForm extends Component {
             stylist:"",
             service:"",
 
-            consultationRating:"",
-            consultationFeedback:"",
-            customerServiceRating:"",
-            customerServiceFeedback:"",
-            timeRating:"",
-            timeFeedback:"",
+            consultationRating:"",          
+            customerServiceRating:"",      
+            timeRating:"",      
             stylingRating:"",
-            stylingFeedback:"",
+
             overallRating:"",
             overallFeedback:""
         }
 
         this.addFeedbackCard = this.addFeedbackCard.bind(this);
+
         this.updateStylist = this.updateStylist.bind(this);
         this.updateService = this.updateService.bind(this);
+
         this.updateConsultationRating = this.updateConsultationRating.bind(this);
-        
         this.updateCustomerServiceRating = this.updateCustomerServiceRating.bind(this);
-        
         this.updateTimeRating = this.updateTimeRating.bind(this);
-        
         this.updateStylingRating = this.updateStylingRating.bind(this);
-       
+
         this.updateOverallRating = this.updateOverallRating.bind(this);
         this.updateOverallFeedback = this.updateOverallFeedback.bind(this);
     };
@@ -44,19 +40,16 @@ class FeedbackForm extends Component {
         event.preventDefault();
         //add code to create the feedback card using the api
         axios
-            .post('http://localhost:3000/Admin/Feedback', this.state)
+            .post('https://john-cs8-hairschool.herokuapp.com/hairschool/user/feedbacks', this.state)
     
 
         this.setState({
             stylist:"",
             service:"",
             
-            consultationRating:"",
-            
-            customerServiceRating:"",
-            
-            timeRating:"",
-           
+            consultationRating:"",   
+            customerServiceRating:"",       
+            timeRating:"",       
             stylingRating:"",
             
             overallRating:"",
@@ -172,11 +165,10 @@ class FeedbackForm extends Component {
 
                         <Col sm="6">
                         <FormGroup className="Stars">                                          
-                            <Stars/>
-                            <Stars/>
-                            <Stars/>
-                            <Stars/>
-                                                       
+                            <Stars className="styling"/>
+                            <Stars className="consultation" />
+                            <Stars className="customerService"/>
+                            <Stars className="time"/>
                         </FormGroup>
                         </Col>
 

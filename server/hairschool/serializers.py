@@ -29,6 +29,6 @@ class StylistSerializer(serializers.ModelSerializer):
 class User_FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.User_Feedback
-        fields = ('Stylist', 'Service', 'Date', 'Time',
-                  'Consultation', 'Notes', 'On_time', 'Notes', 'Styling', 'Notes',
-                  'Customer_Service', 'Notes', 'Overall', 'Notes',)
+        fields = ('stylist', 'service', 
+                  'consultationRating','customerServiceRating', 'timeRating', 'stylingRating',
+                   'overallRating', 'overallFeedback',)

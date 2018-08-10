@@ -10,7 +10,6 @@ class GetUser extends React.Component {
         this.URL = "https://john-cs8-hairschool.herokuapp.com";
         this.state = {
             user: {
-                firstname:"",
                 username:""
             }
         };
@@ -22,7 +21,7 @@ class GetUser extends React.Component {
         axios   
           .get(`${this.URL}/hairschool/rest-auth/user/`)
           .then(res => {
-              this.setState({user: {firstname:res.data.firstname}});
+              this.setState({user: {username:res.data.username}});
               console.log(this.state.user)
           })
           .catch(err => {
@@ -31,7 +30,7 @@ class GetUser extends React.Component {
     }
 render() {
     return (
-        <div classname="GetUser"> Welcome, {this.state.user.firstname} SaaSha! </div>
+        <div classname="GetUser"> Welcome, {this.state.user.username}! </div>
     );
 }
 }

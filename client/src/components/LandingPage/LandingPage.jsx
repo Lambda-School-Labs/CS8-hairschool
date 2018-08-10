@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import { StyleRoot } from 'radium';
 import Hair1 from '../images/hair1.jpg';
-import Hair2 from '../images/hair2.jpg';
-import Hair3 from '../images/hair3.jpg';
-import Hair4 from '../images/hair4.jpg';
-import Hair5 from '../images/hair5.jpg';
+import Hair2 from '../images/newimg2.jpg';
+import Hair3 from '../images/newimg1.jpg';
+import Hair4 from '../images/newimg3.jpg';
+import Hair5 from '../images/newimg4.jpg';
 import LHSPhoto from '../images/LHSlogo.png';
 
 

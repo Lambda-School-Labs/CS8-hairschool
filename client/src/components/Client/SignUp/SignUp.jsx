@@ -8,7 +8,7 @@ import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
 class SignUp extends React.Component {
     constructor(props) {
         super(props);
-        this.login = { firstname: "", email: "", password1: "" };
+        this.signup = { username: "", email: "", password1: "", password2:"" };
         this.URL = "https://john-cs8-hairschool.herokuapp.com";
         this.state = {
             showNoEmailError: false,
@@ -26,7 +26,7 @@ class SignUp extends React.Component {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        this.login[name] = value;
+        this.signup[name] = value;
     };
     clearErrors() {
         setTimeout(() => this.setState({ showNoEmailError: false, showNoPasswordError: false }), 2500);
@@ -40,6 +40,7 @@ class SignUp extends React.Component {
         );
     }
     showNoPasswordError() {
+        this.clearErrors();
         return (
             <div className="errorMessage">
                 {" "}
@@ -47,16 +48,16 @@ class SignUp extends React.Component {
             </div>
         );
     }
-    buttonHandler(login, history) {
-        const {firstname, username, password1, password2 } = login;
+    buttonHandler(signup, history) {
+        const { username, email, password1, password2 } = signup;
         if (/^.+@.+\..+$/.test(username) === false) {
             this.setState({ showNoEmailError: true });
         }
         // if (password === "") this.setState({ showNoPasswordError: true });
         axios
             .post(`${this.URL}/hairschool/rest-auth/registration/`, {
-                firstname,
                 username,
+                email,
                 password1,
                 password2
             })
@@ -69,21 +70,18 @@ class SignUp extends React.Component {
             });
     }
 
-    myClick = () =>  {
-        alert("Success! You're signed up!");
-    }
     render() {
-        console.log(this.login);
+        console.log(this.signup);
         return (
             <div className="SignUp">
                 <div className="container">
                     <div className="SignUpTitle">Sign Up</div>
                     <Form className="SignUpForm">
                     <FormGroup>
-                            <Label for="FirstName">First Name: </Label>
+                            <Label for="Username">Username: </Label>
                             <Input
                                 type="text"
-                                name="firstname"
+                                name="username"
                                 onChange={this.handleInputChange}
                             />
                         </FormGroup>
@@ -91,7 +89,7 @@ class SignUp extends React.Component {
                             <Label for="Email">Email: </Label>
                             <Input
                                 type="email"
-                                name="username"
+                                name="email"
                                 onChange={this.handleInputChange}
                             />
                         </FormGroup>
@@ -116,13 +114,12 @@ class SignUp extends React.Component {
                             ? this.showNoPasswordError()
                             : false}
                         <Button
-                            onClick={this.myClick}
-                            //onClick={() => this.buttonHandler(this.login, this.props.history)}
+                            onClick={() => this.buttonHandler(this.signup, this.props.history)}
                             className="button"
                             color="purple"
                             size="lg"
                         >
-                            <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign Up </Link>
+                            Sign Up
                         </Button>
                         <div>
                             Have an account?<Link
