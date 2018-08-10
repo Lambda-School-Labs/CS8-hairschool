@@ -35,23 +35,15 @@ class Stylist(models.Model):
 
 
 class User_Feedback(models.Model):
-    Stylist = models.CharField(max_length=30)
-    Service = models.CharField(max_length=30)
-    # Date = models.DateTimeField(auto_now_add=True)
-    # Time = models.DateTimeField()
-    STARS = ((1, 'one'),
-             (2, 'two'),
-             (3, 'three'),)
-    Consultation = models.IntegerField(choices=STARS, default=3)
-    Notes = models.CharField(max_length=300)
-    On_time = models.IntegerField(choices=STARS, default=3)
-    Notes = models.CharField(max_length=300)
-    Styling = models.IntegerField(choices=STARS, default=3)
-    Notes = models.CharField(max_length=300)
-    Customer_Service = models.IntegerField(choices=STARS, default=3)
-    Notes = models.CharField(max_length=300)
-    Overall = models.IntegerField(choices=STARS, default=3)
-    Notes = models.CharField(max_length=300)
+    stylist = models.CharField(max_length=30)
+    service = models.CharField(max_length=30)
+    date = models.DateTimeField(auto_now_add=True)
+    consultationRating = models.IntegerField()
+    timeRating = models.IntegerField()
+    stylingRating = models.IntegerField()
+    customerServiceRating = models.IntegerField()
+    overallRating = models.IntegerField()
+    overallFeedback = models.CharField(max_length=300)
 
 
 def __unicode__(self):

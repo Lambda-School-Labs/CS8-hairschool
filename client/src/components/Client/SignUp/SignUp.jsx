@@ -50,7 +50,7 @@ class SignUp extends React.Component {
     }
     buttonHandler(signup, history) {
         const { username, email, password1, password2 } = signup;
-        if (/^.+@.+\..+$/.test(username) === false) {
+        if (/^.+@.+\..+$/.test(email) === false) {
             this.setState({ showNoEmailError: true });
         }
         // if (password === "") this.setState({ showNoPasswordError: true });

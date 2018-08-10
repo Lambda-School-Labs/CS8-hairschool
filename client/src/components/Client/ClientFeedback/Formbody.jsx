@@ -12,12 +12,10 @@ class FeedbackForm extends Component {
         this.state = {
             stylist:"",
             service:"",
-
             consultationRating:"",          
             customerServiceRating:"",      
             timeRating:"",      
             stylingRating:"",
-
             overallRating:"",
             overallFeedback:""
         }
@@ -39,19 +37,19 @@ class FeedbackForm extends Component {
     addFeedbackCard = (event) => {
         event.preventDefault();
         //add code to create the feedback card using the api
+        const token = "token " + localStorage.getItem("auth_token");
+        axios.defaults.headers.common["Authorization"] = token;
         axios
             .post('https://john-cs8-hairschool.herokuapp.com/hairschool/user/feedbacks', this.state)
+            .then(res => console.log(res)).catch(err => console.log(err));
     
-
         this.setState({
             stylist:"",
             service:"",
-            
             consultationRating:"",   
             customerServiceRating:"",       
             timeRating:"",       
             stylingRating:"",
-            
             overallRating:"",
             overallFeedback:""            
         });
@@ -189,7 +187,7 @@ class FeedbackForm extends Component {
                         </FormGroup> 
                         </Col>
 
-                        <button className="FeedbackButton" onClick={this.myClick}> Submit </button>         
+                        <button className="FeedbackButton" onClick={this.addFeedbackCard}> Submit </button>         
                 </Row>
                 </Panel>
             </Form>
