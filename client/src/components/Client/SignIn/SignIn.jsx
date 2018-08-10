@@ -10,7 +10,7 @@ class SignIn extends React.Component {
 	//holds data as user types it
 	constructor(props) {
 		super(props);
-		this.login = { email: "", password: "" };
+		this.login = { username: "", password: "" };
 		this.URL = "https://john-cs8-hairschool.herokuapp.com";
 		this.state = {
 			showNoEmailError: false,
@@ -68,7 +68,7 @@ class SignIn extends React.Component {
 
 				<Form className="SignInForm">
 					<FormGroup>
-						<Label for="Username">Email: </Label>
+						<Label for="Username">Username: </Label>
 						<Input
 							type="text"
 							name="username"

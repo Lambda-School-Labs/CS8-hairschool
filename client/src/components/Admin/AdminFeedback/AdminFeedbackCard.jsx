@@ -10,14 +10,11 @@ const AdminFeedbackCard = (props) => {
             <CardHeader>Stylist:{props.stylist}</CardHeader>
             <CardBody>
                 <CardTitle>Services:{props.services}</CardTitle>
+
                 <CardText>Consultation Rating:{rating[props.consultaionRating]}</CardText>
-                <CardText>Consultation Feedback:{props.consultaitionFeedback}</CardText>
                 <CardText>Customer Service Rating:{props.customerServiceRating}</CardText>
-                <CardText>Customer Service Feedback:{props.customerServiceFeedback}</CardText>
                 <CardText>Time Rating:{props.timeRating}</CardText>
-                <CardText>Time Feedback:{props.timeFeedback}</CardText>
                 <CardText>Styling Rating:{props.stylingRating}</CardText>
-                <CardText>Styling Feedback:{props.stylingFeedback}</CardText>
                 <CardText>Overall Rating:{props.overallRating}</CardText>
                 <CardText>Overall Feedback:{props.overallFeedback}</CardText>
             </CardBody>

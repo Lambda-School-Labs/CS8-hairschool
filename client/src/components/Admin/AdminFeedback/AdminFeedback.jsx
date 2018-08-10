@@ -17,13 +17,10 @@ class AdminFeedback extends React.Component {
         service:"",
 
         consultationRating:"",
-        consultationFeedback:"",
         customerServiceRating:"",
-        customerServiceFeedback:"",
         timeRating:"",
-        timeFeedback:"",
         stylingRating:"",
-        stylingFeedback:"",
+        
         overallRating:"",
         overallFeedback:""
     }
