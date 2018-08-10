@@ -40,6 +40,7 @@ class SignUp extends React.Component {
         );
     }
     showNoPasswordError() {
+        this.clearErrors();
         return (
             <div className="errorMessage">
                 {" "}
@@ -118,7 +119,7 @@ class SignUp extends React.Component {
                             color="purple"
                             size="lg"
                         >
-                        <Link className="link signin" to="/SignIn" style={{textDecoration: 'none'}}> Sign Up </Link>
+                            Sign Up
                         </Button>
                         <div>
                             Have an account?<Link
