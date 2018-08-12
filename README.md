@@ -1,4 +1,41 @@
-# CS8-hairschool
+<p align="center">
+  <br><br>
+<img src="./client/src/components/images/LHSlogo.png "/>
+</p>
+
+
+# **Description**
+
+### Lambda Hair School is a hair salon based application that allows clients to select their desired hair style, schedule a appointment and pay online. The client has the ability to sign up and create a account so they can have their account details available for things such as up coming appointments, rescheduling of appointments and cancellations. Clients have the ability to leave their feedback on the application. The "ADMIN" has the capability to view all appointments, make necessary changes and view all feedback left by clients. 
+
+## TechStack
+
+- Javascript
+- HTML/CSS
+- ReactJS
+- React Router
+- Python
+- Django
+- Bootstrap
+- Netlifly
+- Heroku
+- Stripe API
+- SQLite
+- Axios
+
+
+## App Walkthrough
+
+- Create a Clients/User account  (username - email- password)
+- Clients can set appointment 
+- Clients can go to schedule page choose services, stylist , time and date 
+- from billing page Clients can pay online from the app 
+- Clients have the ability to leave their feedback on the application
+
+
+# **Deployed Site**
+
+### https://www.lambdahairschool.com/
 
 ## API URL `https://aqueous-cove-88989.herokuapp.com`
 
@@ -82,15 +119,6 @@ Registers a new client.
 ```
 
 
-
-// todo
-```
-### GET, PUT, PATCH -- `/hairschool/rest-auth/user/`
-
-### POST -- `/hairschool/rest-auth/rest-auth/facebook/`
-### POST -- `/hairschool/rest-auth/rest-auth/twitter/`
-```
-
 ## User Manipulation
 
 ### GET -- `/hairschool`
@@ -129,23 +157,4 @@ Token must be set in Authorization headers as `'token a123123b321321c123123'`
 }
 ```
 
-<!-- ## ```endpoint template```
-
-### TYPE -- `/endpoint`
-
-Description
-
-**Success**
-
-```js
-{
-};
-```
-
-**Fail**
-
-```js
-{
-}
-``` -->
 
