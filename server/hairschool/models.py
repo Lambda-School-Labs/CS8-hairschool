@@ -39,9 +39,7 @@ class User_Feedback(models.Model):
     Service = models.CharField(max_length=30)
     # Date = models.DateTimeField(auto_now_add=True)
     # Time = models.DateTimeField()
-    STARS = ((1, 'one'),
-             (2, 'two'),
-             (3, 'three'),)
+    
     Consultation = models.IntegerField(choices=STARS, default=3)
     Notes = models.CharField(max_length=300)
     On_time = models.IntegerField(choices=STARS, default=3)
@@ -53,6 +51,9 @@ class User_Feedback(models.Model):
     Overall = models.IntegerField(choices=STARS, default=3)
     Notes = models.CharField(max_length=300)
 
+    'stylist', 'service', 
+                  'consultationRating','customerServiceRating', 'timeRating', 'stylingRating',
+                   'overallRating', 'overallFeedback'
 
 def __unicode__(self):
     return self.name

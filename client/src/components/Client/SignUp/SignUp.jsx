@@ -102,7 +102,7 @@ class SignUp extends React.Component {
                             />
                         </FormGroup>
                         <FormGroup>
-                            <Label for="ConfirmPassword">Confrim Password: </Label>
+                            <Label for="ConfirmPassword">Confirm Password: </Label>
                             <Input
                                 type="password"
                                 name="password2"
